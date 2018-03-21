@@ -1,0 +1,10 @@
+#!/bin/bash
+apt update
+apt -y install python cowsay python2 wget 
+pip2 install beautifulsoup4 
+pip2 install argparse
+pip2 install request
+pip2 install pysocks
+cowsay now run with python
+cowsay python stark.py
+
