@@ -21,14 +21,15 @@ def menu():
 >>>ONLY FOR TERMUX<<<
 
 ===============================================
-1. INSTALL FACEBOOK HACK
-2. INSTALL INSTAGRAM HACK
-3. INSTALL LAZYMUX
-4. INSTALL RED_HAWK
-5. INSTALLING SQL INJECTION
-6. INSTALL WEEMAN
+1. FACEBOOK HACK
+2. INSTAGRAM HACK
+3. LAZYMUX
+4. RED_HAWK
+5. SQL INJECTION
+6. WEEMAN
+7. SQL WEBSITE SCANNER
 ================================================
-7. EXIT
+8. EXIT
 """)
 
 loop = True
@@ -95,13 +96,23 @@ while loop:
          os.system("cd /data/data/com.termux/files/home")
          os.system("git clone https://github.com/evait-security/weeman")
          print("NOW YOU DO PHISHING")
-         rmenu =input( "Back to menu? (y/n: ")
+         rmenu = input( "Back to menu? (y/n: ")
          if rmenu == "y" :
          	 menu()
          else:
          	break
          
-    elif what == "7" :
+    elif what =="7" :
+         os.system("cd $HOME")
+         os.system("git clone https://github.com/Cvar1984/sqlscan.git/")
+         print("NOW SCAN SQL ERROR IN WEBSITE")
+         rmenu = input("Back to menu? (y/n): ")
+         if rmenu == "y" :
+              menu()
+         else:
+         	break
+         
+    elif what == "8" :
          print("I WILL ADD  MORE SOON")
          print("BYE.")
          break
