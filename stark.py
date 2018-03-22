@@ -1,8 +1,5 @@
 import os
 
-os.system( "apt -y update" )
-os.system( "apt -y install wget python2 python figlet cowsay nano")
-
 def menu():
 
     print(""" 
