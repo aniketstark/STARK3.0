@@ -1,6 +1,6 @@
 #!/bin/bash
 apt update
-apt -y install python cowsay python2 wget php git 
+apt -y install zip python cowsay python2 wget php git 
 pip2 install beautifulsoup4 
 pip2 install argparse
 pip2 install request
