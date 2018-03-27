@@ -1,6 +1,5 @@
 import os
 import sys
-import cowsay
 from time import sleep as timeout
 from core.starkmcore import *
 

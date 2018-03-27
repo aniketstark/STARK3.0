@@ -2,8 +2,7 @@
 import os
 import sys
 import time
-import cowsay
-
+from termcolor import colored
 
 backtomenubanner = """
 BACK TO MENU ?

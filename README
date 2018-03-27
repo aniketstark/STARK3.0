@@ -10,7 +10,7 @@ commands-:
 
 	2. ./install 
 
-	3. python stark.py
+	3. python2 stark.py
 
 	
 
