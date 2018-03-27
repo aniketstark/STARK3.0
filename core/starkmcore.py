@@ -75,7 +75,7 @@ def backtomenu():
 	elif backtomenu == "2":
 		sys.exit()
 	else:
-		print "\nERROR: Wrong Commamd bro"
+		print (colored("ERROR: WRONG COMMAND BRO.?", 'red'))
 		time.sleep(2)
 		restartprogram()
 	

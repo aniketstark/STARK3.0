@@ -2,6 +2,7 @@ import os
 import sys
 from time import sleep as timeout
 from core.starkmcore import *
+from termcolor import colored
 
 def menu():
 
@@ -15,7 +16,7 @@ def menu():
 	 ..######.....##....##.....##.##.....##.##....##
 
 >>CREATED BY:ANIKETSTARK
->>SUBSCRIBE CHANNEL:HTTPS://YOUTUBE.COM/C/ANIKETSTARK
+>>SUBSCRIBE CHANNEL:Aniketstark tech
 
 >>THIS IS VIDEO BETA VERSION<<
 >>>ONLY FOR TERMUX<<<
@@ -57,6 +58,6 @@ while loop:
     elif stark == "0":
           restartprogram()
     else:
-		  print "\nERROR: Wrong Command Bro !"
+		  print  (colored("ERROR: WRONG COMMAND BRO.?", 'red'))
 		  timeout(2)
 		  restartprogram()

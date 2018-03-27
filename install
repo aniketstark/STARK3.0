@@ -1,6 +1,6 @@
 #!/bin/bash
 apt update
-apt -y install nano zip python cowsay python2 wget php git 
+apt -y install nano zip python cowsay python2 wget php git zsh
 pip2 install beautifulsoup4 
 pip2 install termcolor
 pip2 install argparse
