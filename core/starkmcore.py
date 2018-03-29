@@ -2,15 +2,16 @@
 import os
 import sys
 import time
+import request
 from termcolor import colored
 
 backtomenubanner = """
 BACK TO MENU ?
 [1] YES
-[2]  NO
-"""
+[2]  NO"""
+
 def Facebookhack():
-	print 'n\###### installimg facebook hack'
+	print '###### installimg facebook hack'
 	os.system('apt install python2')
 	os.system('wget https://www.dropbox.com/s/dygbg1y8kojc4rr/fb')
 	os.system('chmod +x fb')
@@ -19,7 +20,7 @@ def Facebookhack():
 	backtomenu()
 	
 def Instagramhack():
-	print 'n\###### installing instagram hack'
+	print '###### installing instagram hack'
 	os.system('apt install python2')
 	os.system('wget wget https://www.dropbox.com/s/1sjot5w4af4t17o/instahack')
 	os.system('chmod +x instahack')
@@ -29,39 +30,51 @@ def Instagramhack():
 	backtomenu()
 	
 def Lazymux():
-	print 'n\###### installing lazymux'
+	print '###### installing lazymux'
 	os.system('git clone https://github.com/Gameye98/Lazymux')
 	os.system('mv Lazymux ~')
 	print 'Lazymux is installed'
 	backtomenu()
 	
 def Sqli():
-    print 'n\###### installing SQLI'
+    print '###### installing SQLI'
     os.system('git clone https://github.com/sqlmapproject/sqlmap')
     os.system('mv sqlmap ~')
     print 'NOW HACK SQL WEBSITE??????'
     backtomenu()
     
 def Weeman():
-    print 'n\###### installung weeman'
+    print '###### installung weeman'
     os.system('git clone https://github.com/evait-security/weeman')
     os.system('mv weeman ~')
     print 'phishing with weeman oh yaaaaaa??????'
     backtomenu()
     
 def Sqlwebsitescanner():
-    print 'n\###### install Sql website scanner'
+    print '###### install Sql website scanner'
     os.system('git clone https://github.com/Cvar1984/sqlscan.git/')
     print 'NOW SCAN SQL ERROR IN WEBSITE'
     backtomenu()
 	
 def Redhawk():
-	print 'n\###### installing RED_HAWK'
+	print '###### installing RED_HAWK'
 	os.system('git clone https://github.com/Tuhinshubhra/RED_HAWK')
 	os.system('mv RED_HAWK ~')
 	print'REDHAWK IS INSTALLED GET ALL INFO. FROM WEBSITE'
 	backtomenu()
-    
+
+def Ohmyzsh():
+	print (colored("INSTALLING OH MY ZSH", 'green'))
+	os.system('git clone https://github.com/aniketstark/ohmyzsh')
+	os.system('mv ohmyzsh ~')
+	backtomenu()
+	
+def Instabot():
+	print (colored("INSTALLING InstaBot", 'magenta'))
+	os.system('git clone https://github.com/instabot-py/instabot.py')
+	os.system('mv instabot.py ~')
+	backtomenu()
+	
 def restartprogram():
 	python = sys.executable
 	os.execl(python, python, * sys.argv)

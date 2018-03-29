@@ -6,7 +6,7 @@ from termcolor import colored
 
 def menu():
 
-    print(""" 
+    print(colored("""
 	 ..######..########....###....########..##....##
 	 .##....##....##......##.##...##.....##.##...##.
 	 .##..........##.....##...##..##.....##.##..##..
@@ -29,9 +29,11 @@ def menu():
 5. SQL INJECTION
 6. WEEMAN
 7. SQL WEBSITE SCANNER
+8. OhMyZsh (FOR TERMUX NEW LOOK)
+9. InstaBot
 ================================================
-8. EXIT
-""")
+10. EXIT
+""", 'green'))
 
 loop = True
 
@@ -42,7 +44,7 @@ while loop:
     if stark == "1":
           Facebookhack()
     elif stark == "2":
-          Instagramgack()
+          Instagramhack()
     elif stark == "3":
           Lazymux()
     elif stark == "4":
@@ -54,6 +56,10 @@ while loop:
     elif stark == "7":
     	   Sqlwebsitescanner()
     elif stark == "8":
+    	   Ohmyzsh()
+    elif stark == "9":
+    	   Instabot()
+    elif stark == "10":
     	   sys.exit()
     elif stark == "0":
           restartprogram()
