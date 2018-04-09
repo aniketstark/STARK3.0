@@ -31,8 +31,10 @@ def menu():
 7. SQL WEBSITE SCANNER
 8. OhMyZsh (FOR TERMUX NEW LOOK)
 9. InstaBot
+10. Phishy
+11. About
 ================================================
-10. EXIT
+12. EXIT
 """, 'green'))
 
 loop = True
@@ -60,6 +62,10 @@ while loop:
     elif stark == "9":
     	   Instabot()
     elif stark == "10":
+    	   Phishy()
+    elif stark == "11":
+    	   About()
+    elif stark == "12":
     	   sys.exit()
     elif stark == "0":
           restartprogram()

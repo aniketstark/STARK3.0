@@ -75,6 +75,19 @@ def Instabot():
 	os.system('mv instabot.py ~')
 	backtomenu()
 	
+def Phishy():
+	print (colored("INSTALLING PHISHY", 'green'))
+	print_slow(colored("HAPPY PHISHING BITCH", 'red'))
+	os.system('https://github.com/aniketstark/Phishy')
+	os.system('mv Phishy ~')
+	backtomenu()
+	
+def print_slow(str):
+    for letter in str:
+        sys.stdout.write(letter)
+        sys.stdout.flush()
+        time.sleep(0.1)
+
 def restartprogram():
 	python = sys.executable
 	os.execl(python, python, * sys.argv)
@@ -91,4 +104,8 @@ def backtomenu():
 		print (colored("ERROR: WRONG COMMAND BRO.?", 'red'))
 		time.sleep(2)
 		restartprogram()
+	
+def About():
+	print_slow(colored("hi this is aniket stark welcome to my tool\nhahaha sorry thats a python script edit and create by me\nthanks to undeadsec,anonhacker,Stackoverflow.com for more tools\nplease support me and subscribe me\ni have youtube channel Aniketstark Tech .!", 'red'))
+	backtomenu()
 	
