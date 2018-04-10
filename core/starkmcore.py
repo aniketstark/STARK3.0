@@ -78,7 +78,7 @@ def Instabot():
 def Phishy():
 	print (colored("INSTALLING PHISHY", 'green'))
 	print_slow(colored("HAPPY PHISHING BITCH", 'red'))
-	os.system('https://github.com/aniketstark/Phishy')
+	os.system('git clone https://github.com/aniketstark/Phishy')
 	os.system('mv Phishy ~')
 	backtomenu()
 	
