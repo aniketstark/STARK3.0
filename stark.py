@@ -15,10 +15,10 @@ def menu():
 	 .##....##....##....##.....##.##....##..##...##.
 	 ..######.....##....##.....##.##.....##.##....##
 
->>CREATED BY:ANIKETSTARK
+>>CREATED BY:ANIKET STARK
 >>SUBSCRIBE CHANNEL:Aniketstark tech
 
->>THIS IS VIDEO BETA VERSION<<
+>>Fuck ya<<
 >>>ONLY FOR TERMUX<<<
 
 ===============================================
