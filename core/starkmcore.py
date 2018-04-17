@@ -82,6 +82,23 @@ def Phishy():
 	os.system('mv Phishy ~')
 	backtomenu()
 	
+def Metasploit():
+	print_slow(colored("Are you use this tool for\neducational purpose only\ny/n", 'red'))
+	metasploit = raw_input("stark> ")
+	if metasploit == "y":
+		os.system('wget https://Auxilus.github.io/metasploit.sh')
+		os.system('mv metasploit.sh ~')
+	        print_slow(colored("Now go to home directory\nand run this command\nsh metasploit.sh", 'cyan'))
+	elif metasploit == "n":
+		print_slow(colored("your not using for educational purpose\nso you can not install\nplease install this tool for educational purpose", 'red'))
+		time.sleep(2)
+		sys.exit()
+		
+def Update():
+	print_slow(colored("updating.........", 'cyan'))
+	os.system('git pull')
+	restartprogram()
+	
 def print_slow(str):
     for letter in str:
         sys.stdout.write(letter)

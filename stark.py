@@ -32,9 +32,11 @@ def menu():
 8. OhMyZsh (FOR TERMUX NEW LOOK)
 9. InstaBot
 10. Phishy
-11. About
+11. metasploit
+12. Update
+13. About
 ================================================
-12. EXIT
+14. EXIT
 """, 'green'))
 
 loop = True
@@ -64,8 +66,12 @@ while loop:
     elif stark == "10":
     	   Phishy()
     elif stark == "11":
-    	   About()
+    	   Metasploit()
     elif stark == "12":
+    	   Update()
+    elif stark == "13":
+    	   About()
+    elif stark == "14":
     	   sys.exit()
     elif stark == "0":
           restartprogram()
