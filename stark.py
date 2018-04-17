@@ -31,10 +31,10 @@ def menu():
 7. SQL WEBSITE SCANNER
 8. OhMyZsh (FOR TERMUX NEW LOOK)
 9. InstaBot
-10. Phishy
-11. metasploit
-12. Update
-13. About
+10.Phishy
+11.metasploit
+12.Update
+13.About
 ================================================
 14. EXIT
 """, 'green'))
