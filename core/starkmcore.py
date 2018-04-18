@@ -95,7 +95,8 @@ def Metasploit():
 		sys.exit()
 		
 def Update():
-	print_slow(colored("updating.........", 'cyan'))
+	print_slow(colored("always update this tool ok.!", 'cyan'))
+	print_slow(colored("updating.........", 'green'))
 	os.system('git pull')
 	restartprogram()
 	
@@ -123,6 +124,6 @@ def backtomenu():
 		restartprogram()
 	
 def About():
-	print_slow(colored("hi this is aniket stark welcome to my tool\nhahaha sorry thats a python script edit and create by me\nthanks to undeadsec,anonhacker,Stackoverflow.com for more tools\nplease support me and subscribe me\ni have youtube channel Aniketstark Tech .!", 'red'))
+	print_slow(colored("hi this is aniket stark welcome to my tool\nhahaha sorry thats a python2 script edit and create by me\nthanks to undeadsec,anonhacker,Stackoverflow.com\nfor more tools please support me and subscribe me\ni have youtube channel Aniketstark Tech .!", 'red'))
 	backtomenu()
 	
