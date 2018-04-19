@@ -2,7 +2,6 @@
 import os
 import sys
 import time
-import request
 from termcolor import colored
 
 backtomenubanner = """
