@@ -85,8 +85,9 @@ def Metasploit():
 	print_slow(colored("Are you use this tool for\neducational purpose only\ny/n", 'red'))
 	metasploit = raw_input("stark> ")
 	if metasploit == "y":
-		os.system('wget https://Auxilus.github.io/metasploit.sh')
+		os.system('curl -LO https://raw.githubusercontent.com/aniketstark/TMetasploit/master/metasploit.sh')
 		os.system('mv metasploit.sh ~')
+		os.system('cd ~ && chmod +x metasploit.sh')
 	        print_slow(colored("Now go to home directory\nand run this command\nsh metasploit.sh", 'cyan'))
 	elif metasploit == "n":
 		print_slow(colored("your not using for educational purpose\nso you can not install\nplease install this tool for educational purpose", 'red'))
