@@ -1,4 +1,4 @@
-##starkmcore.py - useful module for STARKBETA
+##starkmcore.py - useful module for STARK2.0
 import os
 import sys
 import time
@@ -9,6 +9,143 @@ BACK TO MENU ?
 [1] YES
 [2]  NO"""
 
+def achacking():
+ print(colored("""
+     ==================================================
+     ....###.........######.....##.....##....###.....######..##....##
+     ...##.##.......##....##....##.....##...##.##...##....##.##...##.
+     ..##...##......##..........##.....##..##...##..##.......##..##..
+     .##.....##.....##..........#########.##.....##.##.......#####...
+     .#########.....##..........##.....##.#########.##.......##..##..
+     .##.....##.###.##....##....##.....##.##.....##.##....##.##...##.
+     .##.....##.###..######.....##.....##.##.....##..######..##....##
+     ==================================================
+	1. Facebook Hack
+	2. Instagram Hack
+	3. Phishy
+	4. Weeman
+     ==================================================
+	5. Back
+     ==================================================
+    """, 'green'))
+
+ acha = raw_input("stark > ")
+
+ if acha == "1":
+    	Facebookhack()
+ elif acha == "2":
+    	Instagramhack()
+ elif acha == "3":
+    	Phishy()
+ elif acha == "4":
+    	Weeman()
+ elif acha == "5":
+ 	   os.system("clear")
+ 	   restartprogram()
+ elif acha == "0":
+        restartprogram()
+ else:
+	print_slow(colored("ERROR: WRONG COMMAND BRO.?", 'red'))
+	restartprogram()
+
+def info():
+ print(colored("""
+      _ _  _ ____ ____     ____ ____ ___ _  _ ____ ____ _ _  _ ____ 
+      | |\ | |___ |  |     | __ |__|  |  |__| |___ |__/ | |\ | | __ 
+      | | \| |    |__| .   |__] |  |  |  |  | |___ |  \ | | \| |__] 
+
+      ==============================================
+      1. Red_Hawk
+      2. ReconDog
+      3. SQL Scanner
+      ==============================================
+      4. Back
+      ==============================================
+""", 'green'))
+
+ info = raw_input("stark > ")
+ 
+ if info == "1":
+ 	Redhawk()
+ elif info == "2":
+ 	ReconDog()
+ elif info == "3":
+ 	Sqlscanner()
+ elif info == "4":
+ 	os.system("clear")
+ 	restartprogram()
+ elif info == "0":
+     restartprogram()
+ else:
+	print_slow(colored("ERROR: WRONG COMMAND BRO.?", 'red'))
+	os.system("clear")
+	restartprogram()
+	
+def webhacking():
+ print(colored("""
+                        _          _                   _     _               
+       __      __  ___ | |__      | |__    __ _   ___ | | __(_) _ __    __ _ 
+       \ \ /\ / / / _ \| '_ \     | '_ \  / _` | / __|| |/ /| || '_ \  / _` |
+        \ V  V / |  __/| |_) | _  | | | || (_| || (__ |   < | || | | || (_| |
+         \_/\_/   \___||_.__/ (_) |_| |_| \__,_| \___||_|\_\|_||_| |_| \__, |
+                                                                       |___/
+ """, 'red'))
+ print(colored("""
+       =====================================================================
+       1. SQLInjection
+       =====================================================================
+       2.Back
+       =====================================================================
+ """, 'green'))
+ 
+ webh = raw_input("stark > ")
+ 
+ if webh == "1":
+ 	Sqli()
+ elif webh == "2":
+ 	os.system("clear")
+        restartprogram()
+     
+ elif info == "0":
+     restartprogram()
+ else:
+	print_slow(colored("ERROR: WRONG COMMAND BRO.?", 'red'))
+	os.system("clear")
+	restartprogram()
+	
+def termux():
+ print(colored("""
+       _____                                     
+      |_   _|                                    
+        | |    ___  _ __  _ __ ___   _   _ __  __
+        | |   / _ \| '__|| '_ ` _ \ | | | |\ \/ /
+        | |  |  __/| |   | | | | | || |_| | >  < 
+        \_/   \___||_|   |_| |_| |_| \__,_|/_/\_\
+                                            
+      ============================================
+      1. Lazymux
+      2. Metasploit-Framework
+      ============================================
+      3. Back
+      ============================================                                      
+   """, 'green'))
+
+ termux = raw_input("stark > ")
+ 
+ if termux == "1":
+ 	Lazymux()
+ elif termux == "2":
+ 	Metasploit()
+ elif termux == "3":
+     os.system("clear")
+     restartprogram()
+ 
+def ReconDog():
+ print_slow(colored("installing ReconDog", 'green'))
+ os.system("git clone https://github.com/UltimateHackers/ReconDog")
+ os.system("mv ReconDog ~")
+ backtomenu()
+ 
 def Facebookhack():
 	print '###### installimg facebook hack'
 	os.system('apt install python2')
@@ -49,7 +186,7 @@ def Weeman():
     print 'phishing with weeman oh yaaaaaa??????'
     backtomenu()
     
-def Sqlwebsitescanner():
+def Sqlscanner():
     print '###### install Sql website scanner'
     os.system('git clone https://github.com/Cvar1984/sqlscan.git/')
     print 'NOW SCAN SQL ERROR IN WEBSITE'
@@ -126,4 +263,3 @@ def backtomenu():
 def About():
 	print_slow(colored("hi this is aniket stark welcome to my tool\nhahaha sorry thats a python2 script edit and create by me\nthanks to undeadsec,anonhacker,Stackoverflow.com\nfor more tools please support me and subscribe me\ni have youtube channel Aniketstark Tech .!", 'red'))
 	backtomenu()
-	

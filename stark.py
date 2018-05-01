@@ -22,21 +22,14 @@ def menu():
 >>>ONLY FOR TERMUX<<<
 
 ===============================================
-1. FACEBOOK HACK
-2. INSTAGRAM HACK
-3. LAZYMUX
-4. RED_HAWK
-5. SQL INJECTION
-6. WEEMAN
-7. SQL WEBSITE SCANNER
-8. OhMyZsh (FOR TERMUX NEW LOOK)
-9. InstaBot
-10.Phishy
-11.metasploit
-12.Update
-13.About
+1. Account Hacking
+2. Information Gathering
+3. Website Hacking
+4. Termux
+5. Update
+6. About
 ================================================
-14. EXIT
+7. EXIT
 """, 'green'))
 
 loop = True
@@ -46,33 +39,23 @@ while loop:
     stark = raw_input("stark > ")
     
     if stark == "1":
-          Facebookhack()
+    	  os.system("clear")
+          achacking() 
     elif stark == "2":
-          Instagramhack()
+    	  os.system("clear")
+          info()
     elif stark == "3":
-          Lazymux()
+    	  os.system("clear")
+          webhacking()
     elif stark == "4":
-    	  Redhawk()
+    	  os.system("clear")
+    	  termux()
     elif stark == "5":
-          Sqli()
+          Update()
     elif stark == "6":
-    	  Weeman()
+          About()
     elif stark == "7":
-    	   Sqlwebsitescanner()
-    elif stark == "8":
-    	   Ohmyzsh()
-    elif stark == "9":
-    	   Instabot()
-    elif stark == "10":
-    	   Phishy()
-    elif stark == "11":
-    	   Metasploit()
-    elif stark == "12":
-    	   Update()
-    elif stark == "13":
-    	   About()
-    elif stark == "14":
-    	   sys.exit()
+    	sys.exit()
     elif stark == "0":
           restartprogram()
     else:
