@@ -5,7 +5,7 @@ from core.starkmcore import *
 from termcolor import colored
 
 def menu():
-
+    os.system("clear")
     print(colored("""
 	 ..######..########....###....########..##....##
 	 .##....##....##......##.##...##.....##.##...##.
