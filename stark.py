@@ -28,8 +28,9 @@ def menu():
 4. Termux
 5. Update
 6. About
+7. DeepStore
 ================================================
-7. EXIT
+8. EXIT
 """, 'green'))
 
 loop = True
@@ -55,6 +56,9 @@ while loop:
     elif stark == "6":
           About()
     elif stark == "7":
+     	 os.system("clear")
+         deepstore()
+    elif stark == "8":
     	sys.exit()
     elif stark == "0":
           restartprogram()

@@ -9,6 +9,11 @@ BACK TO MENU ?
 [1] YES
 [2]  NO"""
 
+def deepstore():
+ print_slow(colored("Welcome mr.Stark\n", 'blue'))
+ print_slow(colored("Your work is currently working\nplease wait i am checking...............\nyour work is completed57%\nSo please patience\nyour work will complete soon ok.!\nplease update every day or every week..!\nbye......!", 'green'))
+ backtomenu()
+
 def achacking():
  print(colored("""
      ==================================================
@@ -252,7 +257,7 @@ def Metasploit():
 		
 def Update():
 	print_slow(colored("always update this tool ok.!", 'cyan'))
-	print_slow(colored("updating.........", 'green'))
+	print_slow(colored("updating.........\n", 'green'))
 	os.system('git pull')
 	restartprogram()
 	
