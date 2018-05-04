@@ -58,8 +58,9 @@ def info():
       1. Red_Hawk
       2. ReconDog
       3. SQL Scanner
+      4. Txtool
       ==============================================
-      4. Back
+      5. Back
       ==============================================
 """, 'green'))
 
@@ -72,6 +73,8 @@ def info():
  elif info == "3":
  	Sqlscanner()
  elif info == "4":
+ 	Txtool()
+ elif info == "5":
  	os.system("clear")
  	restartprogram()
  elif info == "0":
@@ -125,8 +128,9 @@ def termux():
       ============================================
       1. Lazymux
       2. Metasploit-Framework
+      3. Txtool
       ============================================
-      3. Back
+      4. Back
       ============================================                                      
    """, 'green'))
 
@@ -137,9 +141,24 @@ def termux():
  elif termux == "2":
  	Metasploit()
  elif termux == "3":
+ 	Txtool()
+ elif termux == "4":
      os.system("clear")
      restartprogram()
+     
+ elif info == "0":
+     restartprogram()
+ else:
+	print_slow(colored("ERROR: WRONG COMMAND BRO.?", 'red'))
+	os.system("clear")
+	restartprogram()
  
+def Txtool():
+ print_slow(colored("installing txtool", 'red'))
+ os.system("git clone https://github.com/kuburan/txtool")
+ os.system("mv txtool ~")
+ backtomenu()
+
 def ReconDog():
  print_slow(colored("installing ReconDog", 'green'))
  os.system("git clone https://github.com/UltimateHackers/ReconDog")
