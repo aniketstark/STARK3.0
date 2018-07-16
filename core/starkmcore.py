@@ -134,8 +134,9 @@ def termux():
       1. Lazymux
       2. Metasploit-Framework
       3. Txtool
+      4. ohmyzsh (new look for termux)
       ============================================
-      4. Back
+      5. Back
       ============================================                                      
    """, 'green'))
 
@@ -148,6 +149,8 @@ def termux():
  elif termux == "3":
  	Txtool()
  elif termux == "4":
+ 	Ohmyzsh()
+ elif termux == "5":
      os.system("clear")
      restartprogram()
      
@@ -157,7 +160,13 @@ def termux():
 	print_slow(colored("ERROR: WRONG COMMAND BRO.?", 'red'))
 	os.system("clear")
 	restartprogram()
- 
+
+def Ohmyzsh():
+ print_slow(colored("New look for termux with\ncool features", 'cyan'))
+ os.system(" https://github.com/aniketstark/ohmyzsh")
+ os.system("mv ohmyzsh")
+ backtomenu()
+
 def Txtool():
  print_slow(colored("installing txtool", 'red'))
  os.system("git clone https://github.com/kuburan/txtool")
