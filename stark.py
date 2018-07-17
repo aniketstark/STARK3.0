@@ -26,11 +26,12 @@ def menu():
 2. Information Gathering
 3. Website Hacking
 4. Termux
-5. Update
-6. About
-7. DeepStore
+5. Error Fixer
+6. Update
+7. About
+8. DeepStore
 ================================================
-8. EXIT
+9. EXIT
 """, 'green'))
 
 loop = True
@@ -52,13 +53,16 @@ while loop:
     	  os.system("clear")
     	  termux()
     elif stark == "5":
-          Update()
+    	  os.system("clear")
+          Fix()
     elif stark == "6":
-          About()
+          Update()
     elif stark == "7":
+          About()
+    elif stark == "8":
      	 os.system("clear")
          deepstore()
-    elif stark == "8":
+    elif stark == "9":
     	sys.exit()
     elif stark == "0":
           restartprogram()

@@ -135,8 +135,10 @@ def termux():
       2. Metasploit-Framework
       3. Txtool
       4. ohmyzsh (new look for termux)
+      5. Beef Framework   (64 bit)
+      6. Beef Framework   (32 bit)
       ============================================
-      5. Back
+      7. Back
       ============================================                                      
    """, 'green'))
 
@@ -151,6 +153,71 @@ def termux():
  elif termux == "4":
  	Ohmyzsh()
  elif termux == "5":
+ 	Beef64()
+ elif termux == "6":
+ 	Beef32()
+ elif termux == "7":
+     os.system("clear")
+     restartprogram()
+     
+ elif info == "0":
+     restartprogram()
+ else:
+	print_slow(colored("ERROR: WRONG COMMAND BRO.?", 'red'))
+	os.system("clear")
+	restartprogram()
+def Fix():
+ print(colored("""
+ 
+       .########.########..########...#######..########.
+       .##.......##.....##.##.....##.##.....##.##.....##
+       .##.......##.....##.##.....##.##.....##.##.....##
+       .######...########..########..##.....##.########.
+       .##.......##...##...##...##...##.....##.##...##..
+       .##.......##....##..##....##..##.....##.##....##.
+       .########.##.....##.##.....##..#######..##.....##
+
+       .##..........#####...##.......
+       .##....##...##...##..##....##.
+       .##....##..##.....##.##....##.
+       .##....##..##.....##.##....##.
+       .#########.##.....##.#########
+       .......##...##...##........##.
+       .......##....#####.........##.
+       
+   """, 'red'))
+ print(colored("""
+    ==============================================  
+    1. Metasploit database fixer
+    2. Metasploit nokogiri fixer
+    3. beef nokogiri fixer
+    4. Setup storage in Termux
+    ==============================================
+    5. Exit
+    ==============================================
+    """, 'green'))
+ Fix = raw_input("stark > ")
+ if Fix == "1":
+     os.system("mkdir -p $PREFIX/var/lib/postgresql")
+     os.system("initdb $PREFIX/var/lib/postgresql")
+     os.system("pg_ctl -D $PREFIX/var/lib/postgresql start")
+     print(colored("""FIXED.!""", "green"))
+     print_slow(colored("""if you get this error again by again\n so fix from here ok. :)""","red"))
+ 
+ elif Fix == "2":
+     os.system("bundle config build.nokogiri --use-system-libraries")
+     os.system("bundle install")
+ 
+ elif Fix == "4":
+ 	print_slow(colored("""Fixing storage\n""", "green"))
+ 	os.system("termux-setup-storage")
+        print_slow(colored("""Fixed..!""", "green"))
+ 
+ elif Fix == "3":
+     os.system("cd $PREFIX/share/beef-xss && gem install nokogiri")
+     print_slow(colored("FIXED !", 'green'))
+
+ elif Fix == "5":
      os.system("clear")
      restartprogram()
      
@@ -161,6 +228,7 @@ def termux():
 	os.system("clear")
 	restartprogram()
 
+ 
 def Ohmyzsh():
  print_slow(colored("New look for termux with\ncool features", 'cyan'))
  os.system(" https://github.com/aniketstark/ohmyzsh")
@@ -269,6 +337,22 @@ def Update():
 	print_slow(colored("updating.........\n", 'green'))
 	os.system('git pull')
 	restartprogram()
+	
+def Beef64():
+	print_slow(colored("""Installing Beef for 64 bit\n""", "green"))
+	print_slow(colored("""This could take while......\n""", "green"))
+	os.system("""mkdir -p $PREFIX/etc/apt/sources.list.d && printf "deb [trusted=yes arch=all,aarch64] https://hax4us.github.io/termux-tools/ termux extras" > $PREFIX/etc/apt/sources.list.d/hax4us.list""")
+	os.system("apt update")
+	os.system("apt install beef-xss")
+	backtomenu()
+
+def Beef32():
+	print_slow(colored("""Installing Beef for 64 bit\n""", "green"))
+	print_slow(colored("""This could take while......\n""", "green"))
+	os.system("""mkdir -p $PREFIX/etc/apt/sources.list.d && printf "deb [trusted=yes arch=all,arm] https://hax4us.github.io/termux-tools/ termux extras" > $PREFIX/etc/apt/sources.list.d/hax4us.list""")
+	os.system("apt update")
+	os.system("apt install beef-xss")
+	backtomenu()
 	
 def print_slow(str):
     for letter in str:
