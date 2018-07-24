@@ -137,8 +137,9 @@ def termux():
       4. ohmyzsh (new look for termux)
       5. Beef Framework   (64 bit)
       6. Beef Framework   (32 bit)
+      7. print architecture (32 bit or 64 bit)
       ============================================
-      7. Back
+      8. Back
       ============================================                                      
    """, 'green'))
 
@@ -157,6 +158,10 @@ def termux():
  elif termux == "6":
  	Beef32()
  elif termux == "7":
+     os.system("dpkg --print-architecture")
+     time.sleep(3)
+     backtomenu()
+ elif termux == "8":
      os.system("clear")
      restartprogram()
      
@@ -192,8 +197,9 @@ def Fix():
     2. Metasploit nokogiri fixer
     3. beef nokogiri fixer
     4. Setup storage in Termux
+    5. Restore official source list
     ==============================================
-    5. Exit
+    6. Exit
     ==============================================
     """, 'green'))
  Fix = raw_input("stark > ")
@@ -216,8 +222,14 @@ def Fix():
  elif Fix == "3":
      os.system("cd $PREFIX/share/beef-xss && gem install nokogiri")
      print_slow(colored("FIXED !", 'green'))
-
+     
  elif Fix == "5":
+     os.system("wget https://www.dropbox.com/s/tntdeo1q9bpwc6c/sources.list")
+     os.system("rm -rf /data/data/com.termux/files/usr/etc/apt/sources.list")
+     os.system("rm -rf /data/data/com.termux/files/usr/etc/apt/sources.list.d")
+     os.system("mv sources.list /data/data/com.termux/files/usr/etc/apt/")
+
+ elif Fix == "6":
      os.system("clear")
      restartprogram()
      
@@ -248,12 +260,11 @@ def ReconDog():
  backtomenu()
  
 def Facebookhack():
-	print '###### installimg facebook hack'
+	print '###### installing facebook hack'
 	os.system('apt install python2')
-	os.system('wget https://www.dropbox.com/s/dygbg1y8kojc4rr/fb')
-	os.system('chmod +x fb')
-	os.system('./fb')
-	os.system('rm -r fb password.apk')
+	os.system('cd && mkdir facebookhack')
+	os.system('wget https://www.dropbox.com/s/4d72hyfwrii5vw7/facebook.py ')
+	os.system('mv facebook.py $HOME/facebookhack')
 	backtomenu()
 	
 def Instagramhack():
