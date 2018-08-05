@@ -10,9 +10,44 @@ BACK TO MENU ?
 [2]  NO"""
 
 def deepstore():
- print_slow(colored("Welcome mr.Stark\n", 'blue'))
- print_slow(colored("Your work is currently working\nplease wait i am checking...............\nyour work is completed57%\nSo please patience\nyour work will complete soon ok.!\nplease update every day or every week..!\nbye......!", 'green'))
- backtomenu()
+ print(colored("""
+     ==================================================
+	   
+	  ____
+         /\  _`\
+         \ \ \/\ \     __      __    _____
+          \ \ \ \ \  /'__`\  /'__`\ /\ '__`\
+           \ \ \_\ \/\  __/ /\  __/ \ \ \L\ \
+            \ \____/\ \____\\ \____\ \ \ ,__/
+             \/___/  \/____/ \/____/  \ \ \/
+                                       \ \_\
+                                        \/_/
+ 
+     ==================================================
+        1. My Blogger
+        2. A Story (in progress)
+        3. Facebook Hacking Websites
+        4. Video on Termux Channels (in progress)
+        5. p**n Sites
+     ==================================================
+        6. log out
+     ==================================================
+        """, 'red'))
+
+ deep = raw_input("stark > ")
+
+ if deep == "1":
+     blog()
+
+ elif deep == "6":
+     os.system("clear")
+     restartprogram() 
+ elif deep == "0":
+     restartprogram()
+ else:
+        print_slow(colored("ERROR: WRONG COMMAND BRO.?", 'red'))
+        os.system("clear")
+        restartprogram() 
 
 def achacking():
  print(colored("""
@@ -240,7 +275,9 @@ def Fix():
 	os.system("clear")
 	restartprogram()
 
- 
+def blog():
+ os.system("termux-open-url http://gamerstech330.blogspot.com/\?m\=1/")
+
 def Ohmyzsh():
  print_slow(colored("New look for termux with\ncool features", 'cyan'))
  os.system(" https://github.com/aniketstark/ohmyzsh")
