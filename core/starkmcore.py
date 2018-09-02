@@ -64,8 +64,9 @@ def achacking():
 	2. Instagram Hack
 	3. Phishy
 	4. Weeman
+	5. MBF
      ==================================================
-	5. Back
+	6. Back
      ==================================================
     """, 'green'))
 
@@ -80,6 +81,8 @@ def achacking():
  elif acha == "4":
     	Weeman()
  elif acha == "5":
+ 	   Mbf()
+ elif acha == "6":
  	   os.system("clear")
  	   restartprogram()
  elif acha == "0":
@@ -333,6 +336,12 @@ def Weeman():
     os.system('git clone https://github.com/evait-security/weeman')
     os.system('mv weeman ~')
     print 'phishing with weeman oh yaaaaaa??????'
+    backtomenu()
+
+def Mbf():
+    print_slow(colored("installing MBF", 'green'))
+    os.systerm("wget https://www.dropbox.com/s/n416v5hliiqny17/MBF.zip")
+    os.system("unzip MBF.zip")
     backtomenu()
     
 def Sqlscanner():

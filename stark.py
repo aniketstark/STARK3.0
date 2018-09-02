@@ -16,7 +16,7 @@ def menu():
 	 ..######.....##....##.....##.##.....##.##....##
 
 >>CREATED BY:ANIKET STARK
->>SUBSCRIBE CHANNEL:Aniketstark tech
+>>SUBSCRIBE CHANNEL:GamersTech330
 
 >>Fuck ya<<
 >>>ONLY FOR TERMUX<<<
