@@ -340,8 +340,10 @@ def Weeman():
 
 def Mbf():
     print_slow(colored("installing MBF", 'green'))
-    os.systerm("wget https://www.dropbox.com/s/n416v5hliiqny17/MBF.zip")
+    os.system("wget https://www.dropbox.com/s/6p3xdm8en3b2cn9/MBF.zip")
     os.system("unzip MBF.zip")
+    os.system("rm -rf MBF.zip")
+    os.system("mv MBF ~")
     backtomenu()
     
 def Sqlscanner():
