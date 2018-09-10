@@ -2,6 +2,8 @@ import os
 import sys
 from time import sleep as timeout
 from core.starkmcore import *
+from core.deepmcore import *
+from multiprocessing import Process
 from termcolor import colored
 
 def menu():

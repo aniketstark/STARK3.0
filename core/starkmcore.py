@@ -9,46 +9,6 @@ BACK TO MENU ?
 [1] YES
 [2]  NO"""
 
-def deepstore():
- print(colored("""
-     ==================================================
-	   
-	  ____
-         /\  _`\
-         \ \ \/\ \     __      __    _____
-          \ \ \ \ \  /'__`\  /'__`\ /\ '__`\
-           \ \ \_\ \/\  __/ /\  __/ \ \ \L\ \
-            \ \____/\ \____\\ \____\ \ \ ,__/
-             \/___/  \/____/ \/____/  \ \ \/
-                                       \ \_\
-                                        \/_/
- 
-     ==================================================
-        1. My Blogger
-        2. A Story (in progress)
-        3. Facebook Hacking Websites
-        4. Video on Termux Channels (in progress)
-        5. p**n Sites
-     ==================================================
-        6. log out
-     ==================================================
-        """, 'red'))
-
- deep = raw_input("stark > ")
-
- if deep == "1":
-     blog()
-
- elif deep == "6":
-     os.system("clear")
-     restartprogram() 
- elif deep == "0":
-     restartprogram()
- else:
-        print_slow(colored("ERROR: WRONG COMMAND BRO.?", 'red'))
-        os.system("clear")
-        restartprogram() 
-
 def achacking():
  print(colored("""
      ==================================================
@@ -278,8 +238,6 @@ def Fix():
 	os.system("clear")
 	restartprogram()
 
-def blog():
- os.system("termux-open-url http://gamerstech330.blogspot.com/\?m\=1/")
 
 def Ohmyzsh():
  print_slow(colored("New look for termux with\ncool features", 'cyan'))
@@ -379,17 +337,11 @@ def Phishy():
 	backtomenu()
 	
 def Metasploit():
-	print_slow(colored("Are you use this tool for\neducational purpose only\ny/n", 'red'))
-	metasploit = raw_input("stark> ")
-	if metasploit == "y":
-		os.system('curl -LO https://raw.githubusercontent.com/aniketstark/TMetasploit/master/metasploit.sh')
-		os.system('mv metasploit.sh ~')
-		os.system('cd ~ && chmod +x metasploit.sh')
-	        print_slow(colored("Now go to home directory\nand run this command\nsh metasploit.sh", 'cyan'))
-	elif metasploit == "n":
-		print_slow(colored("your not using for educational purpose\nso you can not install\nplease install this tool for educational purpose", 'red'))
-		time.sleep(2)
-		sys.exit()
+	os.system("wget https://Auxilus.github.io/metasploit.sh")
+	os.system("chmod +x metasploit.sh")
+	os.system("mv metasploit.sh ~")
+	print_slow(colored("now run sh metasploit.sh", 'green'))
+	backtomenu()
 		
 def Update():
 	print_slow(colored("always update this tool ok.!", 'cyan'))
@@ -437,5 +389,5 @@ def backtomenu():
 		restartprogram()
 	
 def About():
-	print_slow(colored("hi this is aniket stark welcome to my tool\nhahaha sorry thats a python2 script edit and create by me\nthanks to undeadsec,anonhacker,Stackoverflow.com\nfor more tools please support me and subscribe me\ni have youtube channel Aniketstark Tech .!", 'red'))
+	print_slow(colored("hi this is aniket stark welcome to my tool\nhahaha sorry thats a python2 script edit and create by me\nthanks to undeadsec,anonhacker,Stackoverflow.com\nfor more tools please support me and subscribe me\ni have youtube channel GamersTech330 .!", 'red'))
 	backtomenu()
