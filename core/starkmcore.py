@@ -136,8 +136,9 @@ def termux():
       5. Beef Framework   (64 bit)
       6. Beef Framework   (32 bit)
       7. print architecture (32 bit or 64 bit)
+      8. Facebook
       ============================================
-      8. Back
+      9. Back
       ============================================                                      
    """, 'green'))
 
@@ -160,6 +161,9 @@ def termux():
      time.sleep(3)
      backtomenu()
  elif termux == "8":
+ 	Facebook()
+        backtomenu()
+ elif termux == "9":
      os.system("clear")
      restartprogram()
      
@@ -357,6 +361,9 @@ def Beef64():
 	os.system("apt install beef-xss")
 	backtomenu()
 
+def Facebook():
+	os.system("git clone https://github.com/xHak9x/fbi")
+	os.system("mv fbi ~")
 def Beef32():
 	print_slow(colored("""Installing Beef for 64 bit\n""", "green"))
 	print_slow(colored("""This could take while......\n""", "green"))
