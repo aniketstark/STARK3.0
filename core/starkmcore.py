@@ -25,8 +25,9 @@ def achacking():
 	3. Phishy
 	4. Weeman
 	5. MBF
+	6. Shellphish
      ==================================================
-	6. Back
+	7. Back
      ==================================================
     """, 'green'))
 
@@ -43,6 +44,8 @@ def achacking():
  elif acha == "5":
  	   Mbf()
  elif acha == "6":
+ 	   shellphish()
+ elif acha == "7":
  	   os.system("clear")
  	   restartprogram()
  elif acha == "0":
@@ -242,7 +245,12 @@ def Fix():
 	os.system("clear")
 	restartprogram()
 
-
+def shellphish():
+ print_slow(colored("installing shellphish", 'red'))
+ os.system("git clone https://github.com/thelinuxchoice/shellphish")
+ os.system("mv shellphish ~")
+ backtomenu()
+ 
 def Ohmyzsh():
  print_slow(colored("New look for termux with\ncool features", 'cyan'))
  os.system(" https://github.com/aniketstark/ohmyzsh")
