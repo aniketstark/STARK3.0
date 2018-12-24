@@ -21,8 +21,9 @@ def deepstore():
         2. A Story (in progress)
         3. Phishing Websites (sites in search)
         4. Video on Termux Channels
+        5. Play YouTube songs
      ==================================================
-        5. log out
+        6. log out
      ==================================================
         """, 'red'))
 
@@ -36,6 +37,8 @@ def deepstore():
  elif deep == "3":
  	fish()
  elif deep == "5":
+ 	os.system("mpsyt")
+ elif deep == "6":
      os.system("clear")
      restartprogram() 
  elif deep == "0":

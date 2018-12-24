@@ -5,8 +5,8 @@ pip2 install termcolor
 pip2 install argparse
 pip2 install request
 pip2 install pysocks
+pkg install mpv
+pip install mps_youtube
+pip install youtube_dl
 cowsay now run with python2
 cowsay python2 stark.py
-##ARE YOU WANT TO INSTALL BIG PACKAGES##
-apt install autoconf bison clang coreutils curl findutils git 
-apr apr-util libffi-dev libgmp-dev libpcap-dev postgresql-dev readline-dev libsqlite-dev openssl-dev libtool libxml2-dev libxslt-dev ncurses-dev pkg-config postgresql-contrib wget make ruby-dev libgrpc-dev termux-tools ncurses ncurses-utils libsodium-dev termux-exec

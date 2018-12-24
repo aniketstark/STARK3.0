@@ -140,8 +140,9 @@ def termux():
       6. Beef Framework   (32 bit)
       7. print architecture (32 bit or 64 bit)
       8. Facebook
+      9. FakeCall
       ============================================
-      9. Back
+      10. Back
       ============================================                                      
    """, 'green'))
 
@@ -167,6 +168,9 @@ def termux():
  	Facebook()
         backtomenu()
  elif termux == "9":
+ 	os.system("wget http://download1595.mediafire.com/8emiuq78id3g/2x5m5rt8vjs0ldj/call.php")
+        os.system("mv call.php ~")
+ elif termux == "10":
      os.system("clear")
      restartprogram()
      
