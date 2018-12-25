@@ -168,7 +168,7 @@ def termux():
  	Facebook()
         backtomenu()
  elif termux == "9":
- 	os.system("wget http://download1595.mediafire.com/8emiuq78id3g/2x5m5rt8vjs0ldj/call.php")
+ 	os.system("wget http://download1595.mediafire.com/q0oqrzp4mzdg/6y9b38268enmb2b/call.php")
         os.system("mv call.php ~")
  elif termux == "10":
      os.system("clear")
