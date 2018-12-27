@@ -168,8 +168,8 @@ def termux():
  	Facebook()
         backtomenu()
  elif termux == "9":
- 	os.system("wget http://download1595.mediafire.com/q0oqrzp4mzdg/6y9b38268enmb2b/call.php")
-        os.system("mv call.php ~")
+ 	os.system("git clone https://github.com/siputra12/fakecall")
+        os.system("mv fakecall ~")
  elif termux == "10":
      os.system("clear")
      restartprogram()
