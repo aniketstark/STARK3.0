@@ -421,7 +421,7 @@ def About():
 	backtomenu()
 
 def gpst():
-    os.system("wget http://download1326.mediafire.com/22ob02uuxeig/i2tuoiu2h5lr5nm/gps.zip")
-    os.system("unzip gps.zip")
-    os.system("rm -rf gps.zip")
+    os.system("wget http://download2269.mediafire.com/rges211r2e8g/i2tuoiu2h5lr5nm/GPST.zip")
+    os.system("unzip GPST.zip")
     os.system("mv gps ~")
+    os.system("rm -rf GPST.zip")
