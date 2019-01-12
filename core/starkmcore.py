@@ -65,8 +65,10 @@ def info():
       2. ReconDog
       3. SQL Scanner
       4. Txtool
+      5. D-Tect
+      6. Gps Tracker ==>(Track victim location with new method)
       ==============================================
-      5. Back
+      7. Back
       ==============================================
 """, 'green'))
 
@@ -81,6 +83,10 @@ def info():
  elif info == "4":
  	Txtool()
  elif info == "5":
+ 	dtect()
+ elif info == "6":
+ 	gpst()
+ elif info == "7":
  	os.system("clear")
  	restartprogram()
  elif info == "0":
@@ -135,10 +141,10 @@ def termux():
       1. Lazymux
       2. Metasploit-Framework
       3. Txtool
-      4. ohmyzsh (new look for termux)
-      5. Beef Framework   (64 bit)
-      6. Beef Framework   (32 bit)
-      7. print architecture (32 bit or 64 bit)
+      4. ohmyzsh ============> (new look for termux)
+      5. Tload ===============> (Best for Payloadmaker)
+      6. Tmvenom============>(payload maker tool)
+      7. print architecture ======>(32 bit or 64 bit)
       8. Facebook
       9. FakeCall
       ============================================
@@ -157,9 +163,9 @@ def termux():
  elif termux == "4":
  	Ohmyzsh()
  elif termux == "5":
- 	Beef64()
+ 	tload()
  elif termux == "6":
- 	Beef32()
+ 	tmvenom()
  elif termux == "7":
      os.system("dpkg --print-architecture")
      time.sleep(3)
@@ -359,31 +365,34 @@ def Metasploit():
 	print_slow(colored("now run sh metasploit.sh", 'green'))
 	backtomenu()
 		
+def tload():
+	os.system("wget http://download1339.mediafire.com/3lfihjke6l0g/21r490jzcty78ef/T-Load.zip")
+	os.system("unzip T-Load.zip")
+	os.system("rm -rf T-Load.zip")
+	os.system("mv T-Load ~")
+	backtomenu()
+	
+def tmvenom():
+	os.system("wget http://download2260.mediafire.com/0gtl00dy50yg/n80ehea79kvp8ns/tmvenom.zip")
+	os.system("unzip tmvenom.zip")
+	os.system("rm -rf tmvenom.zip")
+	os.system("mv tmvenom")
+	backtomenu()
+	
 def Update():
 	print_slow(colored("always update this tool ok.!", 'cyan'))
 	print_slow(colored("updating.........\n", 'green'))
 	os.system('git pull')
 	restartprogram()
-	
-def Beef64():
-	print_slow(colored("""Installing Beef for 64 bit\n""", "green"))
-	print_slow(colored("""This could take while......\n""", "green"))
-	os.system("""mkdir -p $PREFIX/etc/apt/sources.list.d && printf "deb [trusted=yes arch=all,aarch64] https://hax4us.github.io/termux-tools/ termux extras" > $PREFIX/etc/apt/sources.list.d/hax4us.list""")
-	os.system("apt update")
-	os.system("apt install beef-xss")
-	backtomenu()
 
 def Facebook():
 	os.system("git clone https://github.com/xHak9x/fbi")
 	os.system("mv fbi ~")
-def Beef32():
-	print_slow(colored("""Installing Beef for 64 bit\n""", "green"))
-	print_slow(colored("""This could take while......\n""", "green"))
-	os.system("""mkdir -p $PREFIX/etc/apt/sources.list.d && printf "deb [trusted=yes arch=all,arm] https://hax4us.github.io/termux-tools/ termux extras" > $PREFIX/etc/apt/sources.list.d/hax4us.list""")
-	os.system("apt update")
-	os.system("apt install beef-xss")
-	backtomenu()
-	
+
+def dtect():
+	os.system("git clone https://github.com/shawarkhanethicalhacker/D-TECT-1")
+	os.system("mv D-TECT-1 ~")
+
 def print_slow(str):
     for letter in str:
         sys.stdout.write(letter)
@@ -410,3 +419,9 @@ def backtomenu():
 def About():
 	print_slow(colored("hi this is aniket stark welcome to my tool\nhahaha sorry thats a python2 script edit and create by me\nthanks to undeadsec,anonhacker,Stackoverflow.com\nfor more tools please support me and subscribe me\ni have youtube channel GamersTech330 .!", 'red'))
 	backtomenu()
+
+def gpst():
+    os.system("wget http://download1326.mediafire.com/22ob02uuxeig/i2tuoiu2h5lr5nm/gps.zip")
+    os.system("unzip gps.zip")
+    os.system("rm -rf gps.zip")
+    os.system("mv gps ~")

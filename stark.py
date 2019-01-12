@@ -32,8 +32,9 @@ def menu():
 6. Update
 7. About
 8. DeepStore
+9. Generate Payload
 ================================================
-9. EXIT
+10. EXIT
 """, 'green'))
 
 loop = True
@@ -58,13 +59,18 @@ while loop:
     	  os.system("clear")
           Fix()
     elif stark == "6":
-          Update()
+          os.system("chmod +x update")
+	  os.system("./update")
     elif stark == "7":
           About()
     elif stark == "8":
      	 os.system("clear")
          deepstore()
     elif stark == "9":
+    	 print (colored("under progress...", 'green'))
+	 timeout(3)
+         restartprogram()
+    elif stark == "10":
     	sys.exit()
     elif stark == "0":
           restartprogram()
