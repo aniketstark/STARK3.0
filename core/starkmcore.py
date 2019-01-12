@@ -366,14 +366,14 @@ def Metasploit():
 	backtomenu()
 		
 def tload():
-	os.system("wget http://download1339.mediafire.com/3lfihjke6l0g/21r490jzcty78ef/T-Load.zip")
+	os.system("wget https://www.dropbox.com/s/ql8ydqoiyk6h779/T-Load.zip")
 	os.system("unzip T-Load.zip")
 	os.system("rm -rf T-Load.zip")
 	os.system("mv T-Load ~")
 	backtomenu()
 	
 def tmvenom():
-	os.system("wget http://download2260.mediafire.com/0gtl00dy50yg/n80ehea79kvp8ns/tmvenom.zip")
+	os.system("wget https://www.dropbox.com/s/1mi02asqz01ux31/tmvenom.zip")
 	os.system("unzip tmvenom.zip")
 	os.system("rm -rf tmvenom.zip")
 	os.system("mv tmvenom")
@@ -421,7 +421,8 @@ def About():
 	backtomenu()
 
 def gpst():
-    os.system("wget http://download2269.mediafire.com/rges211r2e8g/i2tuoiu2h5lr5nm/GPST.zip")
-    os.system("unzip GPST.zip")
+    os.system("wget https://www.dropbox.com/s/x3zmgz1fjd8b4od/gps.zip")
+    time.sleep(2)
+    os.system("unzip gps.zip")
     os.system("mv gps ~")
-    os.system("rm -rf GPST.zip")
+    os.system("rm -rf gps.zip")
