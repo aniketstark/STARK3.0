@@ -6,6 +6,7 @@ pip2 install argparse
 pip2 install request
 pip2 install pysocks
 pkg install mpv
+pkg instalk libcurl
 pip install mps_youtube
 pip install youtube_dl
 cowsay now run with python2

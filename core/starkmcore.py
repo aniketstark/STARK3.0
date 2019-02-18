@@ -66,9 +66,10 @@ def info():
       3. SQL Scanner
       4. Txtool
       5. D-Tect
-      6. Gps Tracker ==>(Track victim location with new method)
+      6. Gps Tracker  ==>(Track victim location with new method)
+      7. CloudFail       ==>(This is scan or bypass the cloudflare)
       ==============================================
-      7. Back
+      8. Back
       ==============================================
 """, 'green'))
 
@@ -87,6 +88,9 @@ def info():
  elif info == "6":
  	gpst()
  elif info == "7":
+ 	os.system("https://github.com/m0rtem/CloudFail")
+	os.system("mv CloudFail ~")
+ elif info == "8":
  	os.system("clear")
  	restartprogram()
  elif info == "0":
@@ -140,7 +144,7 @@ def termux():
       ============================================
       1. Lazymux
       2. Metasploit-Framework
-      3. Txtool
+      3. Beef Framework ======>  ( Beef is back........soon )
       4. ohmyzsh ============> (new look for termux)
       5. Tload ===============> (Best for Payloadmaker)
       6. Tmvenom============>(payload maker tool)
@@ -159,7 +163,9 @@ def termux():
  elif termux == "2":
  	Metasploit()
  elif termux == "3":
- 	Txtool()
+ 	os.system("""mkdir -p $PREFIX/etc/apt/sources.list.d && printf "deb [trusted=yes] https://hax4us.github.io/termux-tools/ extras main" > $PREFIX/etc/apt/sources.list.d/hax4us.list""")
+ 	os.system("apt update")
+ 	print_slow(colored("Now open new tab use this command\napt install update then pkg install beef-xss", 'green'))
  elif termux == "4":
  	Ohmyzsh()
  elif termux == "5":
@@ -213,8 +219,9 @@ def Fix():
     3. beef nokogiri fixer
     4. Setup storage in Termux
     5. Restore official source list
+    6. Beef bundle not install Fix (thread,nokogiri,gem file fix)
     ==============================================
-    6. Exit
+    7. Exit
     ==============================================
     """, 'green'))
  Fix = raw_input("stark > ")
@@ -245,6 +252,10 @@ def Fix():
      os.system("mv sources.list /data/data/com.termux/files/usr/etc/apt/")
 
  elif Fix == "6":
+ 	os.system("cd $PREFIX/share/beef-xss && bundle install")
+	backtomenu()
+
+ elif Fix == "7":
      os.system("clear")
      restartprogram()
      
