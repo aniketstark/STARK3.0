@@ -66,8 +66,7 @@ def info():
       3. SQL Scanner
       4. Txtool
       5. D-Tect
-      6. Gps Tracker  ==>(Track victim location with new method)
-      7. CloudFail       ==>(This is scan or bypass the cloudflare)
+      6. CloudFail       ==>(This is scan or bypass the cloudflare)
       ==============================================
       8. Back
       ==============================================
@@ -86,8 +85,6 @@ def info():
  elif info == "5":
  	dtect()
  elif info == "6":
- 	gpst()
- elif info == "7":
  	os.system("https://github.com/m0rtem/CloudFail")
 	os.system("mv CloudFail ~")
  elif info == "8":
@@ -144,13 +141,13 @@ def termux():
       ============================================
       1. Lazymux
       2. Metasploit-Framework
-      3. Beef Framework ======>  ( Beef is back........soon )
+      3. Beef Framework =>  ( to many error with unstable metasploit )
       4. ohmyzsh ============> (new look for termux)
       5. Tload ===============> (Best for Payloadmaker)
-      6. Tmvenom============>(payload maker tool)
+      6. LazyMeta ============>(payload maker tool)
       7. print architecture ======>(32 bit or 64 bit)
       8. Facebook
-      9. FakeCall
+      9. FakeCall =============(not work recently)
       ============================================
       10. Back
       ============================================                                      
@@ -171,7 +168,7 @@ def termux():
  elif termux == "5":
  	tload()
  elif termux == "6":
- 	tmvenom()
+ 	lazymeta()
  elif termux == "7":
      os.system("dpkg --print-architecture")
      time.sleep(3)
@@ -383,11 +380,9 @@ def tload():
 	os.system("mv T-Load ~")
 	backtomenu()
 	
-def tmvenom():
-	os.system("wget https://www.dropbox.com/s/1mi02asqz01ux31/tmvenom.zip")
-	os.system("unzip tmvenom.zip")
-	os.system("rm -rf tmvenom.zip")
-	os.system("mv tmvenom")
+def lazymeta():
+	os.system("git clone https://github.com/aniketstark/LazyMeta")
+	os.system("mv LazyMeta ~")
 	backtomenu()
 	
 def Update():
