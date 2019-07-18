@@ -67,6 +67,7 @@ def info():
       4. Txtool
       5. D-Tect
       6. CloudFail       ==>(This is scan or bypass the cloudflare)
+      7. InurlBR
       ==============================================
       8. Back
       ==============================================
@@ -87,7 +88,10 @@ def info():
  elif info == "6":
  	os.system("https://github.com/m0rtem/CloudFail")
 	os.system("mv CloudFail ~")
- elif info == "8":
+elif infi == "7":
+	os.system("git clone https://github.com/googleinurl/SCANNER-INURLBR")
+	os.system("mv SCANNER-INURLBR ~") 
+elif info == "8":
  	os.system("clear")
  	restartprogram()
  elif info == "0":
