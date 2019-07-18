@@ -86,20 +86,20 @@ def info():
  elif info == "5":
  	dtect()
  elif info == "6":
- 	os.system("https://github.com/m0rtem/CloudFail")
+ 	os.system("git clone https://github.com/m0rtem/CloudFail")
 	os.system("mv CloudFail ~")
-elif infi == "7":
+ elif info == "7":
 	os.system("git clone https://github.com/googleinurl/SCANNER-INURLBR")
 	os.system("mv SCANNER-INURLBR ~") 
-elif info == "8":
- 	os.system("clear")
- 	restartprogram()
+ elif info == "8":
+ 	 os.system("clear")
+ 	 restartprogram()
  elif info == "0":
-     restartprogram()
+       restartprogram()
  else:
-	print_slow(colored("ERROR: WRONG COMMAND BRO.?", 'red'))
-	os.system("clear")
-	restartprogram()
+       print_slow(colored("ERROR: WRONG COMMAND BRO.?", 'red'))
+       os.system("clear")
+       restartprogram()
 	
 def webhacking():
  print(colored("""
