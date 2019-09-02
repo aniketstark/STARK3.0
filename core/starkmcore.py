@@ -151,7 +151,7 @@ def termux():
       6. LazyMeta ============>(payload maker tool)
       7. print architecture ======>(32 bit or 64 bit)
       8. Facebook
-      9. FakeCall =============(not work recently)
+      9. FakeCall =============(Working 100%)
       ============================================
       10. Back
       ============================================                                      
@@ -181,8 +181,11 @@ def termux():
  	Facebook()
         backtomenu()
  elif termux == "9":
- 	os.system("git clone https://github.com/siputra12/fakecall")
-        os.system("mv fakecall ~")
+ 	os.system("git clone https://github.com/TheSpeedX/TBomb")
+        os.system("mv TBomb ~")
+	print_slow(colored("""Installed""", "green"))
+	print_slow(colored("""You Need to Watch the Video""", "green"))
+	os.system("termux-open-url https://www.youtube.com/channel/UC6CwdVj9ztWzJtO3q43isfg")
  elif termux == "10":
      os.system("clear")
      restartprogram()
