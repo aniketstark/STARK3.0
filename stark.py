@@ -75,6 +75,6 @@ while loop:
     elif stark == "0":
           restartprogram()
     else:
-		  print  (colored("ERROR: WRONG COMMAND BRO.?", 'red'))
+		  print  (colored("ERROR: COMMAND GONE WRONG.?", 'red'))
 		  timeout(2)
 		  restartprogram()
