@@ -152,8 +152,9 @@ def termux():
       7. print architecture ======>(32 bit or 64 bit)
       8. Facebook
       9. FakeCall =============(Working 100%)
+      10. TAssistant =========>(new tool)
       ============================================
-      10. Back
+      11. Back
       ============================================                                      
    """, 'green'))
 
@@ -187,6 +188,10 @@ def termux():
 	print_slow(colored("""You Need to Watch the Video""", "green"))
 	os.system("termux-open-url https://www.youtube.com/channel/UC6CwdVj9ztWzJtO3q43isfg")
  elif termux == "10":
+	os.system("git clone https://github.com/aniketstark/TAssistent")
+	os.system("mv TAssistent ~")
+	backtomenu()
+ elif termux == "11":
      os.system("clear")
      restartprogram()
      
