@@ -20,7 +20,8 @@ def menu():
 >>CREATED BY:ANIKET STARK
 >>SUBSCRIBE CHANNEL:GamersTech330
 
->>Fuck ya<<
+>>I FUCK MY LIFE<<
+:( MY LIFE IS AT END, BYE REMEBER ME;)
 >>>ONLY FOR TERMUX<<<
 
 ===============================================
