@@ -151,8 +151,8 @@ def termux():
       6. LazyMeta ============>(payload maker tool)
       7. print architecture ======>(32 bit or 64 bit)
       8. Facebook
-      9. FakeCall =============(Working 100%)
-      10. TAssistant =========>(new tool)
+      9. TBomb 		===========(SMS AND CALL SPAM)
+      10. TAssistant 	=========> (new tool)
       ============================================
       11. Back
       ============================================                                      
