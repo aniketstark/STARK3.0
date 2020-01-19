@@ -5,6 +5,7 @@ from core.starkmcore import *
 from multiprocessing import Process
 from termcolor import colored
 
+checkfile()
 def menu():
     os.system("clear")
     print(colored("""
@@ -30,7 +31,7 @@ def menu():
 6. Error Fixer
 7. Credits
 8. Follow Me!
-9. Open Old Stark2.0 (available soon)
+9. Open Old Stark2.0
 ================================================
 10. EXIT
 """, 'green'))
@@ -63,6 +64,8 @@ while loop:
     elif stark == "8":
          os.system("clear")
          follow()
+    elif stark == "9":
+	 os.system("cd modules/STARK2.0/ && python2 stark.py")
     elif stark == "10":
         sys.exit()
     elif stark == "0":

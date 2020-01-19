@@ -269,8 +269,7 @@ def HASH():
  if hasher == "1":
   print colored("""Enter Hash""","green")
   hash = raw_input("hash > ")
-  os.system("cd modules/Hash-Buster/ && python hash.py -s""+ hash +")
-  time.sleep(5)
+  os.system("cd modules/modules/Hash-Buster && python hash.py -s "+ hash +" 
  elif hasher == "2":
   os.system("cd modules/hasher && python2 hash.py")
 

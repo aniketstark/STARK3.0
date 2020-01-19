@@ -14,12 +14,15 @@ pip2 install pysocks
 pkg install mpv
 pkg install libcurl
 wget https://www.dropbox.com/s/jwckwt71gcki2nc/modules.zip
+wget https://www.dropbox.com/s/0z1r4h3u596kucv/STARK2.0.zip
 printf "$red"
 unzip modules.zip
 wget https://www.dropbox.com/s/wv9yf4tgivj5mzg/sql.sh
 chmod +x sql.sh
 mv sql.sh modules/SCANNER-INURLBR/
+unzip STARK2.0.zip -d modules/
 rm -rf modules.zip
+rm -rf STARK2.0.zip
 printf "$green"
 echo "You Need to install Termux API APP For some
 commands" | pv -qL 10
