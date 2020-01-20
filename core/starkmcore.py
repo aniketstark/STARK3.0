@@ -198,7 +198,8 @@ def AccountH():
   ===============================================================""", "red"), colored("""
    1. ShellPhish
    2. Weeman
-   3. BlackEye""","green"), colored("""
+   3. BlackEye
+   4. F@cebookhack""","green"), colored("""
   ===============================================================
   """, "red")
  phish = raw_input("phishing > ")
@@ -336,6 +337,7 @@ def EFixer():
   4. Setup storage in Termux
   5. Restore official source list
   6. Beef bundle not install Fix (thread,nokogiri,gem file fix)""","green"), colored("""
+  7. Restore Termux Buttons (arrows,pgdn..more)
   ==================================================""","red")
  Fix = raw_input("stark > ")
  if Fix == "1":
