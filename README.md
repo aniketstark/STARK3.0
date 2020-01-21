@@ -1,9 +1,6 @@
 IN THIS SCRIPT INCLUDES SOME SCRIPTS WHICH IS I DONT CREATED THEM
 I DONT TAKE RESPONSIBLITY OF ANY MISUSED
 
-TAssistant
-Termux Assistant in this tool you can do every thing 
-but everything is comming soon
 Now in this script available some basic to advance features
 like
 1.  Information gathering tools
