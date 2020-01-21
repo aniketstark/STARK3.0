@@ -210,7 +210,7 @@ def AccountH():
  elif phish  == "3":
   os.system("cd modules/blackeye/ && bash blackeye.sh")
  elif phish  == "4":
-  os.system("cd modules/facebookhack/ && python2 facebookhack.py")
+  os.system("cd modules/facebookhack/ && python2 facebook.py")
  elif phish  == "5":
   reset()
 
