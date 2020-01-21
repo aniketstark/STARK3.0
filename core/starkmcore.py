@@ -372,7 +372,7 @@ def EFixer():
         os.system("cd $PREFIX/share/beef-xss && bundle install")
 
  elif Fix == "7":
-	os.system("cp termux.properties ~/.termux/")
+	os.system("cp modules/termux.properties ~/.termux/")
 	printslow(colored("""fix now restart your termux""", "green"))
 
  elif Fix == "8":
