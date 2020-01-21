@@ -210,6 +210,8 @@ def AccountH():
  elif phish  == "3":
   os.system("cd modules/blackeye/ && bash blackeye.sh")
  elif phish  == "4":
+  os.system("cd modules/facebookhack/ && python2 facebookhack.py")
+ elif phish  == "5":
   reset()
 
 ###################Web Hacking Section
@@ -336,8 +338,8 @@ def EFixer():
   3. beef nokogiri fixer
   4. Setup storage in Termux
   5. Restore official source list
-  6. Beef bundle not install Fix (thread,nokogiri,gem file fix)""","green"), colored("""
-  7. Restore Termux Buttons (arrows,pgdn..more)
+  6. Beef bundle not install Fix (thread,nokogiri,gem file fix)
+  7. Restore Termux Buttons (arrows,pgdn..more)""","green"), colored("""
   ==================================================""","red")
  Fix = raw_input("stark > ")
  if Fix == "1":
