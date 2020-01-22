@@ -28,6 +28,7 @@ mv termux.properties modules/
 unzip STARK2.0.zip -d modules/
 rm -rf modules.zip
 rm -rf STARK2.0.zip
+rm -rf modules/SCANNER-INURLBR/output/save.txt
 printf "$green"
 echo "You Need to install Termux API APP For some
 commands" | pv -qL 10

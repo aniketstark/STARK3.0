@@ -24,8 +24,8 @@ def menu():
 
 ===============================================
 1. Basic Command
-2. Account Hacking
-3. Website Hacking
+2. Account Penatration
+3. Website Penetration
 4. Hash Cracker
 5. Termux
 6. Error Fixer
