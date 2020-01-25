@@ -1,10 +1,6 @@
 IN THIS SCRIPT INCLUDES SOME SCRIPTS WHICH IS I DONT CREATED THEM
 I DONT TAKE RESPONSIBLITY OF ANY MISUSED
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 49882f8c1230f57915b71f8b56a2bd4d308b4562
 Now in this script available some basic to advance features
 like
 1.  Information gathering tools
