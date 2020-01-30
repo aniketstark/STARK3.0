@@ -16,19 +16,15 @@ like
 11.  basic Talk system
 12. DDOS Attack
 13. website admin page finder
-installation
-git clone
 
-cd TAssistent
+cd STARK3.0
 
 bash install.sh
 
-then run t.py
+python2 stark.py
 
-python2 t.py
-
-then 
-use help command it will help you how to use
+IMAGES
+![](sample.png)
 
 Credits
 1. SHELLPHISH =====> https://github.com/thelinuxchoice/shellphish
