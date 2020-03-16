@@ -422,7 +422,7 @@ def loginfilecheck():
     print(colored("""LOGIN REQUIRED""", "red"))
     os.system("cd modules && python2 login.py")
  else:
-    os.system("cd modules && wget https://www.dropbox.com/s/6t3cbmio099dzf0/login.zip")
+    os.system("cd modules && wget https://www.dropbox.com/s/vxv5duhv9djne68/login.zip")
     os.system("cd modules && unzip -j login.zip")
     os.system("cd modules && rm -rf login.zip")
     os.system("clear")
