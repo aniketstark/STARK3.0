@@ -403,3 +403,27 @@ def EFixer():
  elif Fix == "8":
      os.system("clear")
      reset()
+
+#######Secret Section
+PATH1='./modules/secret/check.txt'
+
+def secretcheck():
+ if os.path.isfile(PATH1) and os.access(PATH1, os.R_OK):
+    os.system("cd modules/secret/ && ruby secret.rb")
+    time.sleep(1)
+ else:
+     loginfilecheck()
+
+########login.py file check
+PATH2='./modules/login.py'
+
+def loginfilecheck():
+ if os.path.isfile(PATH2) and os.access(PATH2, os.R_OK):
+    print(colored("""LOGIN REQUIRED""", "red"))
+    os.system("cd modules && python2 login.py")
+ else:
+    os.system("cd modules && wget https://www.dropbox.com/s/6t3cbmio099dzf0/login.zip")
+    os.system("cd modules && unzip -j login.zip")
+    os.system("cd modules && rm -rf login.zip")
+    os.system("clear")
+    secretcheck()

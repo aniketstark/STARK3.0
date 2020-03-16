@@ -33,13 +33,7 @@ printf "$green"
 echo "You Need to install Termux API APP For some
 commands" | pv -qL 10
 printf "$green"
-read -p "Do you Want to install app from offline Download [y/n]" o
-if [ $o = "y" ]
-then
-termux-open modules/app/TApi.apk --chooser
-elif [ $o = "n" ]
-then
-termux-open-url https://play.google.com/store/apps/details?id=com.termux.api
-else
+echo "Please install Termux API from
+playstore" | pv -qL 10
 termux-open-url https://play.google.com/store/apps/details?id=com.termux.api
 fi

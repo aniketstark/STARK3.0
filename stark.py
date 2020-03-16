@@ -17,24 +17,25 @@ def menu():
          .##....##....##....##.....##.##....##..##...##.
          ..######.....##....##.....##.##.....##.##....##
 			    3.0(BETA)
->> CREATED BY:ANIKET STARK
->> Youtube:   GamersTech330
->> Instagram: @aniketstark330
->>>ONLY FOR TERMUX<<<
+ >> CREATED BY:ANIKET STARK
+ >> Youtube:   GamersTech330
+ >> Instagram: @aniketstark330
+ >>>ONLY FOR TERMUX<<<
 
-===============================================
-1. Basic Command
-2. Account Penatration
-3. Website Penetration
-4. Hash Cracker
-5. Termux
-6. Error Fixer
-7. Credits
-8. Follow Me!
-9. Open Old Stark2.0
-================================================
-10. EXIT
-""", 'green'))
+ ===============================================
+ 1. Basic Command
+ 2. Account Penatration
+ 3. Website Penetration
+ 4. Hash Cracker
+ 5. Termux
+ 6. Error Fixer
+ 7. Credits
+ 8. Follow Me!
+ 9. Open Old Stark2.0
+ 10. Hacker Movies
+ ================================================
+ 11. EXIT
+ """, 'green'))
 
 loop = True
 
@@ -66,8 +67,14 @@ while loop:
          follow()
     elif stark == "9":
 	 os.system("cd modules/STARK2.0/ && python2 stark.py")
-    elif stark == "10":
+    elif stark == "11":
         sys.exit()
+    elif stark == "secret" or stark == "secretfile" or stark == "69":
+	secretcheck()
+    elif stark == "nano starkmcore.py" or stark == "config":
+        os.system("echo WOW WOW THIS DEVELOPER MODE ARE YOU!| lolcat -a -d 50")
+	os.system("echo DEVELOPER MODE START IN 10 Seconds | lolcat -a -d 100")
+   	os.system("cd core/ && nano starkmcore.py")
     elif stark == "0":
           reset()
     else:
