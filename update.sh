@@ -14,7 +14,7 @@ if [ -d "modules" ]
     printf "$lg"
     echo "Backuping Modules"
     mv ~/STARK3.0/modules ~
-    cd && wget  https://www.dropbox.com/s/g4x3v4c9nyr07di/update1.zip
+    cd && wget  https://www.dropbox.com/s/xa4rjeyng7p9rli/update1.zip
     unzip -j ~/update1.zip
     rm -rf ~/update1.zip
     chmod +x ~/update1.sh
