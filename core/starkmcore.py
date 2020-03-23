@@ -35,6 +35,22 @@ def printslow(str):
         sys.stdout.flush()
         time.sleep(0.1)
 
+backtomenubanner = """
+BACK TO MENU ?
+[1] YES
+[2]  NO"""
+
+def backtomenu():
+        print backtomenubanner
+        backtomenu = raw_input("stark > ")
+        if backtomenu == "1":
+                restartprogram()
+        elif backtomenu == "2":
+                sys.exit()
+        else:
+                print (colored("ERROR: WRONG COMMAND BRO.?",'red'))
+                time.sleep(2)
+                restartprogram()
 ###################Basic Command
 
 def BasicC():
@@ -278,6 +294,7 @@ def webadm():
 
 def sqldork():
   os.system("cd modules/SCANNER-INURLBR/ && bash sql.sh")
+  backtomenu()
 
 ###################Hash Crack Section
 def HASH():
@@ -315,15 +332,16 @@ def Termux():
   2. Beef Framework  ( to many error with unstable metasploit )
   3. ohmyzsh	     (new look for termux)
   4. TBomb           (SMS AND CALL SPAM)
-  5. LazyMeta	     (Payload Maker Tool)""","green"), colored("""
+  5. LazyMeta	     (Payload Maker Tool)
+  6. Install Nethunter Termux""","green"), colored("""
   ==========================================""","cyan"), colored("""
-  6. Back""","green"), colored("""
+  7. Back""","green"), colored("""
   ==========================================""","cyan")
  term = raw_input("term > ")
  if term == "1":
   os.system("git clone https://github.com/Gameye98/Lazymux")
   os.system("mv Lazymux ~")
- elif term == "2": 
+ elif term == "2":
   os.system("""mkdir -p $PREFIX/etc/apt/sources.list.d && printf "deb [trusted=yes] https://hax4us.github.io/termux-tools/ extras main" > $PREFIX/etc/apt/sources.list.d/hax4us.list""")
   os.system("apt update")
   printslow(colored("Now open new tab use this command\napt install update then pkg install beef-xss", 'green'))
@@ -336,6 +354,9 @@ def Termux():
  elif term == "5":
   os.system("git clone https://github.com/aniketstark/LazyMeta")
   os.system("mv LazyMeta ~")
+ elif term == "6":
+  os.system("cd && wget -O install-nethunter-termux https://offs.ec/2MceZWr && chmod +x install-nethunter-termux")
+  printslow(colored("Now Run Following Command\n cd && ./install-nethunter-termux",'green'))
 
 ###################Error Fixer
 
@@ -364,7 +385,8 @@ def EFixer():
   4. Setup storage in Termux
   5. Restore official source list
   6. Beef bundle not install Fix (thread,nokogiri,gem file fix)
-  7. Restore Termux Buttons (arrows,pgdn..more)""","green"), colored("""
+  7. Restore Termux Buttons (arrows,pgdn..more)
+  8. Fix Nethunter GUI/Kex Error  (Fix No GUI)""","green"), colored("""
   ==================================================""","red")
  Fix = raw_input("stark > ")
  if Fix == "1":
@@ -399,8 +421,13 @@ def EFixer():
  elif Fix == "7":
 	os.system("cp modules/termux.properties ~/.termux/")
 	printslow(colored("""fix now restart your termux""", "green"))
-
  elif Fix == "8":
+	printslow(colored("INSTALL VNC VIEWER FROM PLAYSTORE\n",'green'))
+	os.system("termux-open https://play.google.com/store/apps/details?id=com.realvnc.viewer.android")
+	time.sleep(4)
+	printslow(colored("Keep Calm And Just Belive Me\n\n 1. Start Nethuter\n\n2. Copy Paste This Command\napt-get update\napt-get install lxde-core lxde kali-defaults kali-root-login desktop-base\napt install tightvncserver\n\nvncserver\n\n4. Now Set Password\n\n5. After set password run this command\n DISPLAY=:1 startlxde &\n\n\n Now Main Thing\nHow to Start VNC\nvncserver :1\n\nHow To Stop VNCserver\nvncserver -kill :1\n.",'green'))
+	os.system("echo ENJOY KALI LINUX  GUI | lolcat -a -d 1000")
+ elif Fix == "9":
      os.system("clear")
      reset()
 
@@ -422,8 +449,28 @@ def loginfilecheck():
     print(colored("""LOGIN REQUIRED""", "red"))
     os.system("cd modules && python2 login.py")
  else:
-    os.system("cd modules && wget https://www.dropbox.com/s/vxv5duhv9djne68/login.zip")
+    os.system("cd modules && wget https://www.dropbox.com/s/bhoajbxas8h3swy/login.zip")
     os.system("cd modules && unzip -j login.zip")
     os.system("cd modules && rm -rf login.zip")
     os.system("clear")
     secretcheck()
+
+#########MOVIE Section
+def movie():
+ print colored("""
+  ===============================""","red"), colored("""
+  1. Mr.Robot       (Recommended)
+  2. Who Am I
+  3. Hackerman
+  4. Snowden""","green"), colored("""
+  ===============================""","red")
+ moviem = raw_input("stark > ")
+ if moviem == "1":
+   os.system("termux-open https://g.co/kgs/JttJnS")
+ elif moviem == "2":
+   os.system("termux-open https://g.co/kgs/L8vm4s")
+ elif moviem == "3":
+   os.system("termux-open https://g.co/kgs/bQepZc")
+ elif moviem == "4":
+   os.system("termux-open https://g.co/kgs/cG8iTQ")
+

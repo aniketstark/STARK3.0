@@ -16,7 +16,7 @@ def menu():
          .......##....##....#########.##...##...##..##..
          .##....##....##....##.....##.##....##..##...##.
          ..######.....##....##.....##.##.....##.##....##
-			    3.0(BETA)
+			       3.0
  >> CREATED BY:ANIKET STARK
  >> Youtube:   GamersTech330
  >> Instagram: @aniketstark330
@@ -67,14 +67,16 @@ while loop:
          follow()
     elif stark == "9":
 	 os.system("cd modules/STARK2.0/ && python2 stark.py")
+    elif stark == "10":
+     movie()
     elif stark == "11":
         sys.exit()
     elif stark == "secret" or stark == "secretfile" or stark == "69":
 	secretcheck()
     elif stark == "nano starkmcore.py" or stark == "config":
-        os.system("echo WOW WOW THIS DEVELOPER MODE ARE YOU!| lolcat -a -d 50")
-	os.system("echo DEVELOPER MODE START IN 10 Seconds | lolcat -a -d 100")
-   	os.system("cd core/ && nano starkmcore.py")
+         os.system("echo WOW WOW THIS DEVELOPER MODE ARE YOU!| lolcat -a -d 50")
+	 os.system("echo DEVELOPER MODE START IN 10 Seconds | lolcat -a -d 100")
+   	 os.system("cd core/ && nano starkmcore.py")
     elif stark == "0":
           reset()
     else:
