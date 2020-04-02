@@ -107,7 +107,7 @@ def installkaligui():
     printslow(colored("""3. Now Type this Command-:\n vncserver\n Now it will ask you enter password\n so enter the password\n now it will ask you again\n do you want set pass on view only mode\n so choose n\nNow Thats All Your Setup is Done Now\n\n""","green"))
     printslow(colored("""Now Setup is Done Now i am gonna redirect you\n For install VNC Viewer app from playstore""","green"))
     os.system("termux-open https://play.google.com/store/apps/details\?id\=com.realvnc.viewer.android")
-    os.system("echo Guide will continue in 10s | lolcat -a -d 100")
+    time.sleep(5)
     printslow(colored("""\n\nNow you need to setup vnc connection\nIn VNCviewer so lets do it\nclick on plus button and setup adress like this -:\n localhost::5901\n  In Name choose whatever you want\n clik on ok/connect enter pasword that you enter when you seting pass in vncserver\n""","green"))
     printslow(colored("""\n\nPlease Remember These Things\n""","red"))
     printslow(colored("""Whenever you start vncserver don't forgot to close\nfor clossing use this command-:\nvncserver -kill :1\n\n""","green"))
