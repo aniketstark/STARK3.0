@@ -3,6 +3,7 @@ import sys
 import time
 from termcolor import colored
 
+
 ##FUNCTIONS
 PATH='./modules/test.txt'
 
@@ -183,9 +184,9 @@ def follow():
 ###################Credit Section
 def Credits():
  printslow(colored("""
-  ####################################
+  ##############################################
   TOOLS                 DEVELOPERS
-  ####################################
+  ##############################################
   ShellPhish            TheLinuxChoice
   BlackEye              TheLinuxChoice
   Weeman                Evait Security GmbH
@@ -196,7 +197,8 @@ def Credits():
   Hulk                  Grafov
   GoldenEye             Jseidl
   Breacher(admin_f)     s0md3v
-  ####################################
+  STARK2.0              AniketStark,Unknown_Girl
+  ##############################################
   """, "green"))
 
 ###################Account Hacking Section
@@ -253,6 +255,7 @@ def WebH():
   os.system("cd modules/RED_HAWK && php rhawk.php")
  elif web == "2":
   sqldork()
+  os.system("echo Terminal Clean in 9min | lolcat -a -d 9000")
  elif web == "3":
   webadm()
  elif web == "4":
@@ -298,6 +301,7 @@ def sqldork():
 
 ###################Hash Crack Section
 def HASH():
+ printslow(colored("""There Are Some ERRORS/BUGS In this section\nSo we are trying to Fix It""","green"))
  print colored("""
    __    __       ___           _______. __    __  
   |  |  |  |     /   \         /       ||  |  |  | 

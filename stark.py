@@ -2,6 +2,7 @@ import os
 import sys
 from time import sleep as timeout
 from core.starkmcore import *
+from core.guidemcore import *
 from multiprocessing import Process
 from termcolor import colored
 
@@ -17,7 +18,7 @@ def menu():
          .##....##....##....##.....##.##....##..##...##.
          ..######.....##....##.....##.##.....##.##....##
 			       3.0
- >> CREATED BY:ANIKET STARK
+ >> CREATED BY:ANIKET STARK and Unknown_Girl
  >> Youtube:   GamersTech330
  >> Instagram: @aniketstark330
  >>>ONLY FOR TERMUX<<<
@@ -33,6 +34,7 @@ def menu():
  8. Follow Me!
  9. Open Old Stark2.0
  10. Hacker Movies
+ G. Guide
  ================================================
  11. EXIT
  """, 'green'))
@@ -79,6 +81,8 @@ while loop:
    	 os.system("cd core/ && nano starkmcore.py")
     elif stark == "0":
           reset()
+    elif stark == "G" or stark == "g":
+        guidemain()
     else:
                   print  (colored("ERROR: WRONG COMMAND BRO.?", 'red'))
                   timeout(2)

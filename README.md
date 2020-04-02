@@ -1,4 +1,4 @@
-IN THIS SCRIPT INCLUDES SOME SCRIPTS WHICH IS I DONT CREATED THEM
+IN THIS SCRIPT INCLUDES SOME SCRIPTS WHICH IS NOT CREATED BY ME
 I DONT TAKE RESPONSIBLITY OF ANY MISUSED
 
 Now in this script available some basic to advance features
@@ -13,9 +13,11 @@ like
 8. battery information (with health, temperature, more.,)
 9. text to speak (offline)
 10. flash light (bruh😂 noob)
-11.  basic Talk system
+11. Guide Section
 12. DDOS Attack
 13. website admin page finder
+
+And Maybe More Find me If you CaN.......
 
 cd STARK3.0
 
