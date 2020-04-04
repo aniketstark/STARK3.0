@@ -35,6 +35,7 @@ def menu():
  9. Open Old Stark2.0
  10. Hacker Movies
  G. Guide
+ A. Start Assistant
  ================================================
  11. EXIT
  """, 'green'))
@@ -83,6 +84,8 @@ while loop:
           reset()
     elif stark == "G" or stark == "g":
         guidemain()
+    elif stark == "A" or stark == "a":
+	 os.system("echo This Is Under Built Me And Unknown_Girl404 Working On It | lolcat -a -d 80")
     else:
                   print  (colored("ERROR: WRONG COMMAND BRO.?", 'red'))
                   timeout(2)

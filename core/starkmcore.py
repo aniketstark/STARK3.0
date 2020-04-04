@@ -337,9 +337,10 @@ def Termux():
   3. ohmyzsh	     (new look for termux)
   4. TBomb           (SMS AND CALL SPAM)
   5. LazyMeta	     (Payload Maker Tool)
-  6. Install Nethunter Termux""","green"), colored("""
+  6. Install Nethunter Termux
+  7. Install/Update Termux Packages""","green"), colored("""
   ==========================================""","cyan"), colored("""
-  7. Back""","green"), colored("""
+  8. Back""","green"), colored("""
   ==========================================""","cyan")
  term = raw_input("term > ")
  if term == "1":
@@ -361,8 +362,11 @@ def Termux():
  elif term == "6":
   os.system("cd && wget -O install-nethunter-termux https://offs.ec/2MceZWr && chmod +x install-nethunter-termux")
   printslow(colored("Now Run Following Command\n cd && ./install-nethunter-termux",'green'))
-
-###################Error Fixer
+ elif term == "7":
+  os.system("apt install -y python python2 wget curl php python3 clang git curl zip pv tar termux-api")
+ elif term == "8":
+  reset()
+###################Error Fixe
 
 def EFixer():
  os.system("clear")
