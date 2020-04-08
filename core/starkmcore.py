@@ -15,6 +15,7 @@ def checkfile():
     time.sleep(2)
     exit()
 
+
 def netcheck():
  print(colored("""CHECKING INTERNET ON/OFF""", "green"))
  try :
@@ -365,6 +366,9 @@ def Termux():
  elif term == "7":
   os.system("apt install -y python python2 wget curl php python3 clang git curl zip pv tar termux-api")
  elif term == "8":
+  exit()
+  
+ elif term == "9":
   reset()
 ###################Error Fixe
 

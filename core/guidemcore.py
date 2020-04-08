@@ -40,9 +40,11 @@ def guidemain():
     1. How To Install Metasploit Framework
     2. How To Install GUI In Termux
     3. How To Install Kali Nethunter
-    4. How To Install Kali GUI""","green"),colored("""
+    4. How To Install Kali GUI
+    5. How To Install Packages In Termux
+    6. How To Create Scripts?""","green"),colored("""
     =========================================""","white"),colored("""
-    5. Back""","green"),colored("""
+    7. Back""","green"),colored("""
     =========================================""","white")
     guide = raw_input("GUIDE > ")
     if guide == "1":
@@ -54,6 +56,10 @@ def guidemain():
     elif guide == "4":
         installkaligui()
     elif guide == "5":
+        installpackage()
+    elif guide == "6":
+        createscripts()
+    elif guide == "7":
         reset()
     else:
         os.system("echo Wrong Choice | lolcat -a -d 40")
@@ -116,3 +122,15 @@ def installkaligui():
     printslow(colored("""So Don't Forgot to Closed it""","red"))
     os.system("echo Screen Back in 25s | lolcat -a -d 250")
     guidemain()
+
+def installpackage():
+    printslow(colored("""So Now I Am Gonna Guide You\n""","green"))
+    printslow(colored(""" 1. How To Install And Uninstall Package\n 2. How To Search Package\n\n""","green"))
+    printslow(colored("""1. How To Install And Uninstall Package\n A. Install Package Command\n apt install (Package Name)\n\n Or You Can Use This\n\n pkg install (Package Name)\n\nExample:\napt install python\n Or\npkg install python\n\nB. Uninstall Package\n apt uninstall (Package Name)\n\n Or You Can Use This\n\n pkg remove (Package Name)\n\nExample-:\napt uninstall python\nOr You Can Use This\npkg remove python\n""","green"))
+    print(colored("""======================================\n\n""","blue"))
+    printslow(colored("""2. How To Search Package\n\n apt search (Package Name)\n\n Or You Can Use This Command\n\n pkg search (Package Name)\n\nExample\n\napt search python2\n\nor\n\npkg search python2""","green"))
+    os.system("echo Screen Back In 2min | lolcat -a -d 2000")
+    guidemain()
+    
+def createscripts():
+    os.system("echo This Option Is Under Work | lolcat -a -d 100")
