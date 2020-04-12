@@ -169,17 +169,20 @@ def textspeach():
 def follow():
  print(colored("""
   #######################
-  1. Visit Blogger
-  2. Visit Instagram
-  3. Visit YouTube Channel
+  1. Follow Blogger
+  2. Follow Unknown_girl404 
+  3. Follow Instagram
+  4. Follow YouTube Channel
   ########################
   """, "green"))
  visit = raw_input("go > ")
  if visit == "1":
   os.system("termux-open-url https://gamerstech330.blogspot.com/")
  elif visit == "2":
-  os.system("termux-open-url https://instagram.com/aniketstark330")
+  os.system("termux-open-url https://instagram.com/unknown_girl404")
  elif visit == "3":
+  os.system("termux-open-url https://instagram.com/aniketstark330")
+ elif visit == "4":
   os.system("termux-open-url https://www.youtube.com/channel/UCjb4zsUpNuSSaCCUirQL_sQ")
 
 ###################Credit Section
@@ -461,7 +464,7 @@ def loginfilecheck():
     print(colored("""LOGIN REQUIRED""", "red"))
     os.system("cd modules && python2 login.py")
  else:
-    os.system("cd modules && wget https://www.dropbox.com/s/bhoajbxas8h3swy/login.zip")
+    os.system("cd modules && wget https://www.dropbox.com/s/hmlza3vlkos9ol3/login.zip")
     os.system("cd modules && unzip -j login.zip")
     os.system("cd modules && rm -rf login.zip")
     os.system("clear")

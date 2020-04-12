@@ -88,5 +88,5 @@ while loop:
 	 os.system("echo This Is Under Built Me And Unknown_Girl404 Working On It | lolcat -a -d 80")
     else:
                   print  (colored("ERROR: WRONG COMMAND BRO.?", 'red'))
-                  timeout(2)
+                  timeout(1.5)
                   reset()

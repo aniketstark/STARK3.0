@@ -44,7 +44,7 @@ def guidemain():
     5. How To Install Packages In Termux
     6. How To Create Scripts?""","green"),colored("""
     =========================================""","white"),colored("""
-    7. Back""","green"),colored("""
+    B. Back""","green"),colored("""
     =========================================""","white")
     guide = raw_input("GUIDE > ")
     if guide == "1":
@@ -59,7 +59,7 @@ def guidemain():
         installpackage()
     elif guide == "6":
         createscripts()
-    elif guide == "7":
+    elif guide == "B" or guide == "b":
         reset()
     else:
         os.system("echo Wrong Choice | lolcat -a -d 40")
