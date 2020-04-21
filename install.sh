@@ -6,6 +6,7 @@ printf "$green"
 echo "The Modules file size 50.mb
 After Extraction it will only 100.mb" | pv -qL 10
 pkg install -y pv  git curl php python python2 wget termux-api zip
+pip install lolcat
 pip2 install beautifulsoup4
 pip2 install termcolor
 pip2 install argparse
