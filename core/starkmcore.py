@@ -454,21 +454,12 @@ def secretcheck():
     os.system("cd modules/secret/ && ruby secret.rb")
     time.sleep(1)
  else:
-     loginfilecheck()
-
-########login.py file check
-PATH2='./modules/login.py'
-
-def loginfilecheck():
- if os.path.isfile(PATH2) and os.access(PATH2, os.R_OK):
-    print(colored("""LOGIN REQUIRED""", "red"))
-    os.system("cd modules && python2 login.py")
- else:
-    os.system("cd modules && wget https://www.dropbox.com/s/hmlza3vlkos9ol3/login.zip")
-    os.system("cd modules && unzip -j login.zip")
-    os.system("cd modules && rm -rf login.zip")
-    os.system("clear")
-    secretcheck()
+	 os.system("echo file not find Downloading | lolcat -a -d 50")
+     os.system("wget https://www.dropbox.com/s/qwie3g12wq38txd/secret.zip")
+     os.system("unzip secret.zip -d modules/")
+     os.system("rm -rf secret.zip")
+     os.system("echo Restarting | lolcat -a -d 50")
+     secretcheck()
 
 #########MOVIE Section
 def movie():

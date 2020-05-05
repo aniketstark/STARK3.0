@@ -8,8 +8,8 @@ from termcolor import colored
 
 checkfile()
 def menu():
-    os.system("clear")
-    print(colored("""
+ os.system("clear")
+ print colored("""
          ..######..########....###....########..##....##
          .##....##....##......##.##...##.....##.##...##.
          .##..........##.....##...##..##.....##.##..##..
@@ -34,11 +34,11 @@ def menu():
  8. Follow Me!
  9. Open Old Stark2.0
  10. Hacker Movies
- G. Guide
- A. Start Assistant
+ G. Guide""",'green'),colored("""
+ S. Secret""",'red'),colored("""               There Is No Secret0_0
  ================================================
  11. EXIT
- """, 'green'))
+ """,'green')
 
 loop = True
 
@@ -71,21 +71,21 @@ while loop:
     elif stark == "9":
 	 os.system("cd modules/STARK2.0/ && python2 stark.py")
     elif stark == "10":
-     movie()
+		 movie()
     elif stark == "11":
         sys.exit()
-    elif stark == "secret" or stark == "secretfile" or stark == "69":
-	secretcheck()
+    elif stark == "secret" or stark == "S" or stark == "s":
+		 secretcheck()
     elif stark == "nano starkmcore.py" or stark == "config":
          os.system("echo WOW WOW THIS DEVELOPER MODE ARE YOU!| lolcat -a -d 50")
-	 os.system("echo DEVELOPER MODE START IN 10 Seconds | lolcat -a -d 100")
-   	 os.system("cd core/ && nano starkmcore.py")
+         os.system("echo DEVELOPER MODE START IN 10 Seconds | lolcat -a -d 100")
+         os.system("cd core/ && nano starkmcore.py")
     elif stark == "0":
-          reset()
+         reset()
     elif stark == "G" or stark == "g":
-        guidemain()
+         guidemain()
     elif stark == "A" or stark == "a":
-	 os.system("echo This Is Under Built Me And Unknown_Girl404 Working On It | lolcat -a -d 80")
+		 os.system("echo This Is Under Built Me And Unknown_Girl404 Working On It | lolcat -a -d 80")
     else:
                   print  (colored("ERROR: WRONG COMMAND BRO.?", 'red'))
                   timeout(1.5)

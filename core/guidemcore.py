@@ -42,7 +42,8 @@ def guidemain():
     3. How To Install Kali Nethunter
     4. How To Install Kali GUI
     5. How To Install Packages In Termux
-    6. How To Create Scripts?""","green"),colored("""
+    6. How To Create Scripts?
+    7. How To Hack Accounts""","green"),colored("""
     =========================================""","white"),colored("""
     A. Add More Question
     B. Back""","green"),colored("""
@@ -60,6 +61,8 @@ def guidemain():
         installpackage()
     elif guide == "6":
         createscripts()
+    elif guide == "7":
+		accountpenatration()
     elif guide == "B" or guide == "b":
         reset()
     elif guide == "A" or guide == "a":
@@ -139,7 +142,11 @@ def createscripts():
     printslow(colored("""ok now i am gonna explain you how to make scripts\n\n1. How I Make The Scripts\nI make the scripts on termux using\n a. Nano (GNU) \n b. Geany (GUI)\npackages\n\n2. Where Did I Learn From\nI learn script making, coding everything\n From\na. YouTube\nThere are lots of tutorial are available on youtube\n you can also leanr from there\nb. Website\nyeah.. website you can learn from there also\ni used stackoverflow that site is like god or heaven\n for me beacause that site help you every time whenever\n you get errors or you can use that site for learn some new\nc. From Other Projects\nyeah.. i know i know now you you said its look like copy\n but its not its not there lot of deference between\n learning and copying\n i use the others project for learning\n to understand how they work, what is effect of this command\n what is import, what is print, what os.system, what is echo,\n what is functons(def) and more...\n\nNow in other hand copying what is copying\n copying means you download other project and just\n added your own credits and just push it on your account and\n said 'THIS IS MY SCRIPT'.\n i said thats stupid shit""","green"))
     printslow(colored("""\n\nIn the End I can't Teach but i advice you\nLearn everything by yourself thats perfect for you\nif i get time so i will try to make some tutorial""","green"))
     os.system("echo Screen Back In 2min | lolcat -a -d 2000")
-
+###complete account hack option
+def accountpenatration():
+    printslow(colored("""Now i am gonna explain you. how to hack accounts\nThere is 3 ways or 3 types to hack account\n 1. BruteForce\n 2. Phishing\n 3. Malware/Payload/\n\n1. BruteForce Attack\n In bruteforce attack. attacker use bruteforce script/tool and password list\n ""","green"))
+    os.system("echo sorry this option will complete soon | lolcat -a -d 60")
+    guidemain()
 def add():
 	printslow(colored("""Now I Am gonna redirect you to Insta post\n in that post just comment your questions only\n your questions add it soon as possible\n\n""","green"))
 	os.system("echo Redirecting in 5s | lolcat -a -d 50")
