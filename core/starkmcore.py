@@ -454,7 +454,7 @@ def secretcheck():
     os.system("cd modules/secret/ && ruby secret.rb")
     time.sleep(1)
  else:
-	 os.system("echo file not find Downloading | lolcat -a -d 50")
+     os.system("echo file not find Downloading | lolcat -a -d 50")
      os.system("wget https://www.dropbox.com/s/qwie3g12wq38txd/secret.zip")
      os.system("unzip secret.zip -d modules/")
      os.system("rm -rf secret.zip")
