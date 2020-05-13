@@ -10,7 +10,6 @@ file2 () {
 if [ -d "modules" ]
   then
     rm -rf ~/STARK3.0/modules/secret
-    rm -rf ~/STARK3.0/modules/login.py
     printf "$lg"
     echo "Backuping Modules"
     mv ~/STARK3.0/modules ~

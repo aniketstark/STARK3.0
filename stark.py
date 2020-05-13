@@ -1,3 +1,4 @@
+# encoding: utf-8
 import os
 import sys
 from time import sleep as timeout
@@ -75,7 +76,8 @@ while loop:
     elif stark == "11":
         sys.exit()
     elif stark == "secret" or stark == "S" or stark == "s":
-		 secretcheck()
+		 os.system("python2 core/login.py")
+		 time.sleep(5)
     elif stark == "nano starkmcore.py" or stark == "config":
          os.system("echo WOW WOW THIS DEVELOPER MODE ARE YOU!| lolcat -a -d 50")
          os.system("echo DEVELOPER MODE START IN 10 Seconds | lolcat -a -d 100")
@@ -90,3 +92,4 @@ while loop:
                   print  (colored("ERROR: WRONG COMMAND BRO.?", 'red'))
                   timeout(1.5)
                   reset()
+                  
