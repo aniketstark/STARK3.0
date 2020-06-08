@@ -206,7 +206,7 @@ def follow():
 
 ###################Credit Section
 def Credits():
- printslow(colored("""
+ print colored("""
   ##############################################
   TOOLS                 DEVELOPERS
   ##############################################
@@ -221,8 +221,10 @@ def Credits():
   GoldenEye             Jseidl
   Breacher(admin_f)     s0md3v
   STARK2.0              AniketStark,Unknown_Girl
+  Phishy                Anikestark,Sagar Tripathy
   ##############################################
-  """, "green"))
+  """, "green")
+ os.system("echo This will Closed 20sec | lolcat -a -d 200")
 
 ###################Account Hacking Section
 
@@ -240,7 +242,8 @@ def AccountH():
    1. ShellPhish
    2. Weeman
    3. BlackEye
-   4. F@cebookhack""","green"), colored("""
+   4. F@cebookhack
+   5. Phishy""","green"), colored("""
   ===============================================================
   """, "red")
  phish = raw_input("phishing > ")
@@ -253,6 +256,8 @@ def AccountH():
  elif phish  == "4":
   os.system("cd modules/facebookhack/ && python2 facebook.py")
  elif phish  == "5":
+  os.system("cd modules/Phishy/ && python2 phishy.py")
+ elif phish  == "6":
   reset()
 
 ###################Web Hacking Section
@@ -325,7 +330,6 @@ def sqldork():
 
 ###################Hash Crack Section
 def HASH():
- printslow(colored("""There Are Some ERRORS/BUGS In this section\nSo we are trying to Fix It""","green"))
  print colored("""
    __    __       ___           _______. __    __  
   |  |  |  |     /   \         /       ||  |  |  | 
@@ -336,7 +340,8 @@ def HASH():
                                                    
  ========================================================== ""","blue"), colored("""
  1. Hash-Buster
- 2. Hasher""","green"), colored("""
+ 2. Hasher
+ 3. MD5Buteforce""","green"), colored("""
  ==========================================================""","blue")
  hasher = raw_input("hash > ")
  if hasher == "1":
@@ -346,6 +351,9 @@ def HASH():
   time.sleep(5)
  elif hasher == "2":
   os.system("cd modules/hasher && python2 hash.py")
+ elif hasher == "3":
+  os.system("cd modules/md5brute && python2 md5brute.py")
+  time.sleep(5)
 
 ###################Termux Section
 def Termux():
@@ -421,7 +429,8 @@ def EFixer():
   5. Restore official source list
   6. Beef bundle not install Fix (thread,nokogiri,gem file fix)
   7. Restore Termux Buttons (arrows,pgdn..more)
-  8. Fix Nethunter GUI/Kex Error  (Fix No GUI)""","green"), colored("""
+  8. Fix Nethunter GUI/Kex Error  (Fix No GUI)
+  9. Fix Nethunter GUI Black Screen""","green"), colored("""
   ==================================================""","red")
  Fix = raw_input("stark > ")
  if Fix == "1":
@@ -463,6 +472,8 @@ def EFixer():
 	printslow(colored("Keep Calm And Just Belive Me\n\n 1. Start Nethuter\n\n2. Copy Paste This Command\napt-get update\napt-get install lxde-core lxde kali-defaults kali-root-login desktop-base\napt install tightvncserver\n\nvncserver\n\n4. Now Set Password\n\n5. After set password run this command\n DISPLAY=:1 startlxde &\n\n\n Now Main Thing\nHow to Start VNC\nvncserver :1\n\nHow To Stop VNCserver\nvncserver -kill :1\n.",'green'))
 	os.system("echo ENJOY KALI LINUX  GUI | lolcat -a -d 1000")
  elif Fix == "9":
+	 printslow(colored("""So you install nethunter h.\nthen your excitement was increases and you trying to\nAccess GUI of Nethunter and you get fucking black screen\nThis is because of you don't follow the steps of nethunter installation\n\n WHEN EVER YOU INSTALL OS. FIRST OF ALL YOU NEED TO UPDATE\napt install update\n apt install dist-upgrade""","green"))
+ elif Fix == "10":
      os.system("clear")
      reset()
 

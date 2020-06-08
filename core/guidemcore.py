@@ -147,6 +147,7 @@ def accountpenatration():
     printslow(colored("""Now i am gonna explain you. how to hack accounts\nThere is 3 ways or 3 types to hack account\n 1. BruteForce\n 2. Phishing\n 3. Malware/Payload/\n\n1. BruteForce Attack\n In bruteforce attack. attacker use bruteforce script/tool and password list\n ""","green"))
     os.system("echo sorry this option will complete soon | lolcat -a -d 60")
     guidemain()
+    
 def add():
 	printslow(colored("""Now I Am gonna redirect you to Insta post\n in that post just comment your questions only\n your questions add it soon as possible\n\n""","green"))
 	os.system("echo Redirecting in 5s | lolcat -a -d 50")
