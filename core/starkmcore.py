@@ -3,7 +3,6 @@ import sys
 import time
 from termcolor import colored
 
-
 ##FUNCTIONS
 PATH='./modules/test.txt'
 

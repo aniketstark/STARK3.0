@@ -19,7 +19,7 @@ def menu():
          .##....##....##....##.....##.##....##..##...##.
          ..######.....##....##.....##.##.....##.##....##
 			       3.0
- >> CREATED BY:ANIKET STARK and Unknown_Girl
+ >> CREATED BY:ANIKET STARK and Unknown_Girl404
  >> Youtube:   GamersTech330
  >> Instagram: @aniketstark330
  >>>ONLY FOR TERMUX<<<
@@ -36,6 +36,7 @@ def menu():
  9. Open Old Stark2.0
  10. Hacker Movies
  G. Guide""",'green'),colored("""
+ U. Update""",'blue'),colored("""
  S. Secret""",'red'),colored("""               There Is No Secret0_0
  ================================================
  11. EXIT
@@ -79,15 +80,21 @@ while loop:
 		 os.system("python2 core/login.py")
 		 time.sleep(5)
     elif stark == "nano starkmcore.py" or stark == "config":
-         os.system("echo WOW WOW THIS DEVELOPER MODE ARE YOU!| lolcat -a -d 50")
+         os.system("echo WOW WOW THIS DEVELOPER MODE | lolcat -a -d 50")
          os.system("echo DEVELOPER MODE START IN 10 Seconds | lolcat -a -d 100")
          os.system("cd core/ && nano starkmcore.py")
     elif stark == "0":
          reset()
     elif stark == "G" or stark == "g":
          guidemain()
+    elif stark == "u" or stark == "U":
+		 printslow(colored("""THIS OPTION WILL UPDATE ONLY MAIN PACKAGES NOT THIS TOOL""","green"))
+		 os.system("echo UPDATING SOME IMPORTANT PACKAGES | lolcat -a -d 50")
+		 os.system("pkg install -y python python2 mpv ffmpeg git wget pv termux-api ruby php zip")
+		 os.system("echo DONE | lolcat -a -d 90")
     elif stark == "A" or stark == "a":
-		 os.system("echo This Is Under Built Me And Unknown_Girl404 Working On It | lolcat -a -d 80")
+		 os.system("echo ai feature is under work | lolcat -a -d 100")
+		 os.system("cd core/ && python2 ai.py")
     else:
                   print  (colored("ERROR: WRONG COMMAND BRO.?", 'red'))
                   timeout(1.5)
