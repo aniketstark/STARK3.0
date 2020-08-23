@@ -26,7 +26,7 @@ def menu():
 
  ===============================================
  1. Basic Command
- 2. Account Penatration
+ 2. Account Penetration
  3. Website Penetration
  4. Hash Cracker
  5. Termux
@@ -77,8 +77,9 @@ while loop:
     elif stark == "11":
         sys.exit()
     elif stark == "secret" or stark == "S" or stark == "s":
-		 os.system("python2 core/login.py")
-		 time.sleep(5)
+		 printslow(colored("""This Script is open For all only for now\n""","green"))
+		 os.system("cd modules/secret/ && ruby secret.rb")
+		 time.sleep(2)
     elif stark == "nano starkmcore.py" or stark == "config":
          os.system("echo WOW WOW THIS DEVELOPER MODE | lolcat -a -d 50")
          os.system("echo DEVELOPER MODE START IN 10 Seconds | lolcat -a -d 100")
@@ -90,6 +91,7 @@ while loop:
     elif stark == "u" or stark == "U":
 		 printslow(colored("""THIS OPTION WILL UPDATE ONLY MAIN PACKAGES NOT THIS TOOL""","green"))
 		 os.system("echo UPDATING SOME IMPORTANT PACKAGES | lolcat -a -d 50")
+		 os.system("apt update && apt full-upgrade")
 		 os.system("pkg install -y python python2 mpv ffmpeg git wget pv termux-api ruby php zip")
 		 os.system("echo DONE | lolcat -a -d 90")
     elif stark == "A" or stark == "a":

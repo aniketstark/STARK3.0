@@ -10,7 +10,7 @@ def checkfile():
  if os.path.isfile(PATH) and os.access(PATH, os.R_OK):
     print "Every thing is allright"
  else:
-    print "some files is not installed"
+    print "some files are not installed"
     time.sleep(2)
     exit()
 
@@ -429,7 +429,8 @@ def EFixer():
   6. Beef bundle not install Fix (thread,nokogiri,gem file fix)
   7. Restore Termux Buttons (arrows,pgdn..more)
   8. Fix Nethunter GUI/Kex Error  (Fix No GUI)
-  9. Fix Nethunter GUI Black Screen""","green"), colored("""
+  9. Fix Nethunter GUI Black Screen"
+  10.Fix Termux VNC X1-lock""","green"), colored("""
   ==================================================""","red")
  Fix = raw_input("stark > ")
  if Fix == "1":
@@ -473,6 +474,9 @@ def EFixer():
  elif Fix == "9":
 	 printslow(colored("""So you install nethunter h.\nthen your excitement was increases and you trying to\nAccess GUI of Nethunter and you get fucking black screen\nThis is because of you don't follow the steps of nethunter installation\n\n WHEN EVER YOU INSTALL OS. FIRST OF ALL YOU NEED TO UPDATE\napt install update\n apt install dist-upgrade""","green"))
  elif Fix == "10":
+	 os.system("cd /data/data/com.termux/files/usr/tmp/ && rm -rf .X1-lock .X11-unix")
+	 os.system("echo Fixed Now Restart Your Vncserver | lolcat -a -d 60")
+ elif Fix == "11":
      os.system("clear")
      reset()
 
