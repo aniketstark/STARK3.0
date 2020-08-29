@@ -367,11 +367,12 @@ def Termux():
   2. Beef Framework  ( to many error with unstable metasploit )
   3. ohmyzsh	     (new look for termux)
   4. TBomb           (SMS AND CALL SPAM)
-  5. LazyMeta	     (Payload Maker Tool)
-  6. Install Nethunter Termux
-  7. Install/Update Termux Packages""","green"), colored("""
+  5. TBomb Mod       (SMS AND CALL SPAM UNLIMITED)
+  6. LazyMeta	     (Payload Maker Tool)
+  7. Install Nethunter Termux
+  8. Install/Update Termux Packages""","green"), colored("""
   ==========================================""","cyan"), colored("""
-  8. Back""","green"), colored("""
+  9. Back""","green"), colored("""
   ==========================================""","cyan")
  term = raw_input("term > ")
  if term == "1":
@@ -388,17 +389,22 @@ def Termux():
   os.system("git clone https://github.com/TheSpeedX/TBomb")
   os.system("mv TBomb ~")
  elif term == "5":
+  os.system("git clone https://github.com/H420Prajyot/bomber")
+  os.system("mv bomber ~")
+  printslow(colored("""TBomb mod version is installed in main Dir.\n For installation and more info i am redirecting you""","green"))
+  os.system("termux-open https://github.com/H420Prajyot/bomber/blob/master/README.md")
+ elif term == "6":
   os.system("git clone https://github.com/aniketstark/LazyMeta")
   os.system("mv LazyMeta ~")
- elif term == "6":
+ elif term == "7":
   os.system("cd && wget -O install-nethunter-termux https://offs.ec/2MceZWr && chmod +x install-nethunter-termux")
   printslow(colored("Now Run Following Command\n cd && ./install-nethunter-termux",'green'))
- elif term == "7":
-  os.system("apt install -y python python2 wget curl php python3 clang git curl zip pv tar termux-api")
  elif term == "8":
+  os.system("apt install -y python python2 wget curl php python3 clang git curl zip pv tar termux-api")
+ elif term == "9":
   exit()
   
- elif term == "9":
+ elif term == "0":
   reset()
 ###################Error Fixe
 
