@@ -31,15 +31,17 @@ def menu():
  4. Hash Cracker
  5. Termux
  6. Error Fixer
- 7. Credits
- 8. Follow Me!
- 9. Open Old Stark2.0
- 10. Hacker Movies
- G. Guide""",'green'),colored("""
- U. Update""",'blue'),colored("""
- S. Secret""",'red'),colored("""               There Is No Secret0_0
+ 7. Open Old STARK2.0""","green"), colored("""
+ I. Important Application's""","cyan", attrs=['bold']), colored("""
+ M. Hacking Movie's""","green"), colored("""
+ S. Secret			There Is No Secret0_0""","red", attrs=['bold']), colored("""
+ F. Follow Us""","magenta", attrs=['bold']), colored("""
+ C. Credits""","white", attrs=['bold']), colored("""
+ U. Update""","blue", attrs=['bold']), colored("""
+ ================================================""","green"), colored("""
+ H. Help""","yellow", attrs=['bold']), colored("""
+ E. EXIT
  ================================================
- 11. EXIT
  """,'green')
 
 loop = True
@@ -65,16 +67,19 @@ while loop:
           Termux()
     elif stark == "6":
           EFixer()
-    elif stark == "7":
+    elif stark == "i" or stark == "I":
+		 checkofflineapp()
+		 impapp()
+    elif stark == "c" or stark == "C":
           Credits()
-    elif stark == "8":
+    elif stark == "f" or stark == "F":
          os.system("clear")
          follow()
-    elif stark == "9":
+    elif stark == "7":
 	 os.system("cd modules/STARK2.0/ && python2 stark.py")
-    elif stark == "10":
+    elif stark == "m" or stark == "M":
 		 movie()
-    elif stark == "11":
+    elif stark == "e" or stark == "E":
         sys.exit()
     elif stark == "secret" or stark == "S" or stark == "s":
 		 printslow(colored("""This Script is open For all only for now\n""","green"))
@@ -86,7 +91,7 @@ while loop:
          os.system("cd core/ && nano starkmcore.py")
     elif stark == "0":
          reset()
-    elif stark == "G" or stark == "g":
+    elif stark == "H" or stark == "h":
          guidemain()
     elif stark == "u" or stark == "U":
 		 printslow(colored("""THIS OPTION WILL UPDATE ONLY MAIN PACKAGES NOT THIS TOOL""","green"))

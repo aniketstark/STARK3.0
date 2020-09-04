@@ -36,22 +36,38 @@ def printslow(str):
         sys.stdout.flush()
         time.sleep(0.1)
 
-backtomenubanner = """
-BACK TO MENU ?
-[1] YES
-[2]  NO"""
 
 def backtomenu():
-        print backtomenubanner
+        print(colored("""BACK TO MENU ?\n1. Yes\n2. No\n""","green"))
         backtomenu = raw_input("stark > ")
-        if backtomenu == "1":
-                restartprogram()
-        elif backtomenu == "2":
+        if backtomenu == "1" or backtomenu == "y":
+			reset()
+        elif backtomenu == "2" or backtomenu == "n":
                 sys.exit()
         else:
                 print (colored("ERROR: WRONG COMMAND BRO.?",'red'))
                 time.sleep(2)
-                restartprogram()
+                reset()
+
+
+PATH1='./modules/apps'
+
+def checkofflineapp():
+ if os.path.isdir(PATH1) and os.access(PATH1, os.R_OK):
+    print(colored(""""offline downloads are available""","green"))
+ else:
+	print(colored("""Looks like you didn't download some offline apps\n""","red", attrs=['bold']))
+	print(colored("""Do you want to download some application as offline Y/N\n""","green"))
+	checkoff = raw_input("ans > ")
+	if checkoff == "y" or checkoff == "Y":
+		os.system("wget https://www.dropbox.com/s/4sjxgndgziagsjt/apps.zip")
+		os.system("unzip apps.zip")
+		os.system("rm -rf apps.zip")
+		os.system("mv apps modules/")
+		reset()
+	elif checkoff == "n" or checkoff == "N":
+		print(colored("""ok""","green"))
+ 
 ###################Basic Command
 
 def BasicC():
@@ -134,22 +150,31 @@ def flash():
 	1. On
 	2. Off
 	===============
+	H. Help
 	B. Back
 	===============
  ""","green"))
  torch = raw_input("stark >")
  if torch == "1":
   os.system("termux-torch on")
+  os.system("clear")
   flash()
  elif torch == "2":
   os.system("termux-torch off")
+  os.system("clear")
   flash()
+ elif torch == "h" or torch == "H":
+	 printslow(colored("""Reason's of flash light not turning on\n1. Termux-Api package and app is not installed\n2. Your running screen recorder or camera in background\n""","green"))
+	 time.sleep(5)
+	 os.system("clear")
+	 flash()
  elif torch == "b" or torch == "B":
+	 os.system("clear")
 	 BasicC()
 
 def battery():
  os.system("termux-battery-status")
- time.sleep(5)
+ backtomenu()
 
 
 def cphoto():
@@ -406,7 +431,7 @@ def Termux():
   
  elif term == "0":
   reset()
-###################Error Fixe
+###################Error Fixer Section
 
 def EFixer():
  os.system("clear")
@@ -506,3 +531,155 @@ def movie():
  elif moviem == "4":
    os.system("termux-open https://g.co/kgs/cG8iTQ")
 
+##############Important application for android
+def impapp():
+ os.system("clear")
+ print colored("""
+ ========================================""","white"), colored("""
+         Importan Apps For Android       ""","magenta", attrs=['bold']), colored("""
+ ========================================""","white"), colored("""
+ 1. Photoshop LightRoom           Mod
+ 2. Background Remover
+ 3. Kinemaster                    Mod
+ 4. Image Compressor size reducer
+ 5. Media Convertor
+ 6. Screen Rotation Controller
+ 7. IDM Downloader
+ 8. NewPipe (YT Downloader)
+ 9. World Radio""","green", attrs=['bold']), colored("""
+ ========================================""","white"), colored("""
+ E. Exit""","red", attrs=['bold']), colored("""
+ ========================================""","white")
+ impapk = raw_input("App > ")
+ if impapk == "1":
+	 print colored("""
+	 ========================
+	 1. Server 1
+	 2. Server 2
+	 3. offline server
+	 ========================""","green")
+	 s = raw_input("server > ")
+	 if s == "1":
+		 os.system("termux-open https://moddroid.com/adobe-photoshop-lightroom-cc-1.html")
+		 impapp()
+	 if s == "2":
+		 os.system("termux-open https://www.google.com/amp/s/apkdone.com/adobe-lightroom/amp/")
+		 impapp()
+	 if s == "3":
+		 os.system("termux-open modules/apps/ps_lightroom.apk")
+		 impapp()
+		 
+ elif impapk == "2":
+	 print colored("""
+	 ========================
+	 1. Server 1
+	 3. offline server
+	 ========================""","green")
+	 s = raw_input("server > ")
+	 if s == "1":
+		 os.system("termux-open https://play.google.com/store/apps/details?id=com.handycloset.android.eraser")
+		 impapp()
+	 elif s == "2":
+		 os.system("termux-open modules/apps/bg_remover.apk")
+		 impapp()
+		 
+ elif impapk == "3":
+	 print colored("""
+	 ========================
+	 1. Server 1
+	 2. Server 2
+	 3. offline server
+	 ========================""","green")
+	 s = raw_input("server > ")
+	 if s == "1":
+		 os.system("termux-open https://rexdl.com/android/kinemaster-pro-video-editor-apk.html/")
+		 impapp()
+	 elif s == "2":
+		 os.system("termux-open https://moddroid.com/kinemaster-pro-51908.html")
+		 impapp()
+	 elif s == "3":
+		 os.system("termux-open modules/apps/kimemaster.apk")
+		 impapp()
+		 
+ elif impapk == "4":
+	 print colored("""
+	 ========================
+	 1. Server 1
+	 2. offline server
+	 ========================""","green")
+	 s = raw_input("server > ")
+	 if s == "1":
+		 os.system("termux-open https://play.google.com/store/apps/details?id=com.mobso.photoreducer.lite")
+		 impapp()
+	 elif s == "2":
+		 os.system("termux-open modules/apps/imgcompressor.apk")
+		 impapp()
+
+ elif impapk == "5":
+	 print colored("""
+	 ========================
+	 1. Server 1
+	 2. offline server
+	 ========================""","green")
+	 s = raw_input("server > ")
+	 if s == "1":
+		 os.system("termux-open https://play.google.com/store/apps/details?id=com.AndroidA.MediaConverter")
+		 impapp()
+	 elif s == "2":
+		 os.system("termux-open modules/apps/mc.apk")
+		 impapp()
+		 
+ elif impapk == "6":
+	 print colored("""
+	 ========================
+	 1. Server 1
+	 2. offline server
+	 ========================""","green")
+	 s = raw_input("server > ")
+	 if s == "1":
+		 os.system("termux-open https://play.google.com/store/apps/details?id=ahapps.controlthescreenorientation")
+		 impapp()
+	 elif s == "2":
+		 os.system("termux-open modules/apps/screenrotation.apk")
+		 impapp()
+		 
+ elif impapk == "7":
+	 print colored("""
+	 ========================
+	 1. Server 1
+	 2. offline server
+	 ========================""","green")
+	 s = raw_input("server > ")
+	 if s == "1":
+		 os.system("termux-open https://play.google.com/store/apps/details?id=idm.internet.download.manager")
+		 impapp()
+	 elif s == "2":
+		 os.system("termux-open modules/apps/idm.apk")
+		 impapp()
+		 
+ elif impapk == "8":
+	 print colored("""
+	 ========================
+	 1. Server 1
+	 2. Server 2
+	 ========================""","green")
+	 s = raw_input("server > ")
+	 if s == "1":
+		 os.system("termux-open https://newpipe.schabi.org/")
+		 impapp()
+	 elif s == "2":
+		 os.system("termux-open https://github.com/TeamNewPipe/NewPipe")
+		 impapp()
+ elif impapk == "9":
+	 print colored("""
+	 ========================
+	 1. Server 1
+	 2. Website Interface
+	 ========================""","green")
+	 s = raw_input("server > ")
+	 if s == "1":
+		 os.system("termux-open https://play.google.com/store/apps/details?id=com.jonathanpuckey.radiogarden")
+		 impapp()
+	 elif s == "2":
+		 os.system("termux-open http://radio.garden/")
+		 impapp()
