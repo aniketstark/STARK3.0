@@ -9,7 +9,7 @@ file2
 file2 () {
 if [ -d "modules" ]
   then
-    rm -rf ~/STARK3.0/modules/secret
+    rm -rf ~/STARK3.0/modules/Secret
     printf "$lg"
     echo "Backuping Modules"
     mv ~/STARK3.0/modules ~

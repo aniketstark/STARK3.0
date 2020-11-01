@@ -18,10 +18,10 @@ pkg install libcurl
 wget https://www.dropbox.com/s/geyq8mba09sromy/modules.zip
 printf "$red"
 unzip modules.zip
-wget https://www.dropbox.com/s/da4ijjlwnk66bmg/secret.zip
-unzip secret.zip
-rm -rf secret.zip
-mv secret modules/
+wget https://www.dropbox.com/s/72khp3yvrc9de7t/SecretServer.zip
+unzip SecretServer.zip
+rm -rf SecretServer.zip
+mv Secret modules/
 rm -rf modules.zip
 rm -rf modules/SCANNER-INURLBR/output/save.txt
 printf "$green"

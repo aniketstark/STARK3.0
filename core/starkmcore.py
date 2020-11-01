@@ -84,12 +84,13 @@ def BasicC():
 	1. Flash Light
 	2. Battery Status
 	3. Capture Photo
-	4. Text to Speech (offline)
+	4. Text to Speech         (offline)
 	5. Print Architecture
 	6. Payload Maker
-	7. PortForwarding (using serveo.net)
+	7. PortForwarding         (using serveo.net)
+	8. Connect Casting Devices
 	=================================================
-	8. Back
+	9. Back
 	=================================================
  """, "green"))
 
@@ -111,7 +112,212 @@ def BasicC():
  elif basic == "7":
 	portforward()
  elif basic == "8":
+	cast()
+ elif basic == "9":
 	reset()
+
+##################Casting Section
+def cast():
+ os.system("clear")
+ print colored("""
+  =================================
+  =================================
+  1. Scan Device
+  2. Check Current Info/Cast
+  3. Cast YouTube Video
+  4. Cast File""","green"), colored("""Beta""","red"), colored("""
+  ==================================
+  H. Help""","green"), colored("""
+  E. Exit""","red"), colored("""
+  ==================================""","green")
+ casto = raw_input("cast >")
+ if casto == "1":
+	 os.system("catt scan")
+	 time.sleep(5)
+	 cast()
+ elif casto == "2":
+	 os.system("catt info")
+	 time.sleep(10)
+	 cast()
+ elif casto == "3":
+	 castYT()
+ elif casto == "4":
+	 print colored("""Only these files are accepted-:""","red"), colored("""MP3, MP4, MKV, JPEG, JPG, PNG""","green")
+	 print(colored("""enter file name with directory\nexample-:/sdcard/noob.jpg""","green"))
+	 castF = raw_input("cast > ")
+	 os.system("catt cast  " + castF +" ")
+	 time.sleep(4)
+	 cast()
+ elif casto == "H" or casto == "h":
+	 print colored("""
+	 ===============================================""","white"), colored("""
+	 This function will work on only casting devices
+	 and casting devices are mostly connected to the
+	 wifi. Before you start you need to connect to 
+	 wifi and then use scan option to check casting
+	 device is available or not.""","green"), colored("""
+	 ===============================================""","white"), colored("""
+	 1.Scan Device-: This Option will scan/search
+	 casting device is available or not
+	 
+	 2.Check Current info/cast-: If there is casting
+	 device is available so this option will 
+	 scan/check current casting info/status
+	 
+	 
+	 3.Cast YouTube Video-: if there is casting
+	 device is available so this option give you
+	 permission to cast any youtube video with just
+	 pasting youtube video url
+	 
+	 4.Cast File-:""","green"), colored("""This Option is very unstable""","red"), colored("""
+	 this option will allow you cast any file from your
+	 phone but if your wifi range is too much low so
+	 it take lots time/buffer to load your file""","green"), colored("""
+	 ===============================================""","white"), colored("""
+	 B. Back""","green"), colored("""
+	 ===============================================""","white")
+	 helpchoice = raw_input("say > ")
+	 if helpchoice == "B" or helpchoice == "b":
+		 cast()
+	 else:
+		 cast()	 
+ elif casto == "E" or casto == "e":
+	 os.system("clear")
+	 BasicC()
+ else:
+	 cast()
+
+def castYT():
+ os.system("clear")
+ print colored("""
+  =============================""","white"), colored("""
+  >>>>>>>>>>>Youtube<<<<<<<<<<<""","red", attrs=['bold']), colored("""
+  =============================""","white"), colored("""
+  1. Cast YouTube Video
+  2. Add To Queue Video
+  3. Cntrol""","green"), colored("""
+  =============================""","white"), colored("""
+  H. Help""","green"), colored("""
+  E. Exit""","red"), colored("""
+  =============================""","white")
+ castyt = raw_input("YT > ")
+ if castyt == "1":
+  url = raw_input("Paste YT video url > ")
+  os.system("catt cast " + url +" ")
+  castYT()
+ elif castyt == "2":
+  addtoqueuevideo()
+ elif castyt == "3":
+  castcontrol()
+ elif castyt == "H" or castyt == "h":
+  print colored("""
+   ===============================================""","white"), colored("""
+   Before you start please check casting device is
+   available or not using scan device option""","red"), colored("""
+   ===============================================""","white"), colored("""
+   1. Cast Youtube Video-: This Option will help
+   you cast youtube video with just pasting youtube
+   video url 
+   
+   2. Add To Queue Video-: This Option will help you
+   to add more youtube video as queue. and don't ask
+   me what is queue? just google it
+   
+   3. Control-: This option will help you to cotrol
+   your casting device controlling like
+   Volume, Pause, Stop(shutdown), play/resume and 
+   TimeSeek""","green"), colored("""
+   ==============================================""","white"), colored("""
+   B. Back""","green"), colored("""
+   ==============================================""","white")
+  helpchoose = raw_input("say > ")
+  if helpchoose == "B" or helpchoose == "b":
+	   castYT()
+  else:
+	   castYT()
+ elif castyt == "E" or castyt == "e":
+  os.system("clear")
+  cast()
+
+def castcontrol():
+ os.system("clear")
+ print colored("""
+  ====================================""","white"), colored("""
+  ***************CONTROL**************""","cyan"), colored("""
+  ====================================""","white"), colored("""
+  R. Resume/Play
+  P. Pause
+  S. Stop/Off
+  V. Volume     (1-100)
+  T. Time seek""","green"), colored("""
+  ====================================""","white"), colored("""
+  H. Help""","green"), colored("""
+  E. Exit""","red"), colored("""
+  ====================================""","white")
+ controlcast = raw_input("cmd > ")
+ if controlcast == "R" or controlcast == "r":
+	 os.system("catt play")
+	 castcontrol()
+ elif controlcast == "P" or controlcast == "p":
+	 os.system("catt pause")
+	 castcontrol()
+ elif controlcast == "S" or controlcast == "s":
+	 os.system("catt stop")
+ elif controlcast == "V" or controlcast == "v":
+	 volume = raw_input("volume > ")
+	 os.system("catt volume "+ volume +" ")
+	 castcontrol()
+ elif controlcast == "T" or controlcast == "t":
+	 timejump = raw_input("Jump > ")
+	 os.system("catt seek "+ timejump +" ")
+	 castcontrol()
+ elif controlcast == "H" or controlcast == "h":
+	 print colored("""
+	 ==============================================""","white"), colored("""
+	 R. Resume/Play This option will help you to
+	 resume or play file in cast
+	 
+	 P. Pause This Option will help you to pause 
+	 your casting file
+	 
+	 S. Stop/Off This Option will help you to stop or
+	 in simple word this will stop casting a file 
+	 to your casting device
+	 
+	 V. Volume (0/100) This Option will help you to
+	 increase or decrease the volume""","green"), colored("""
+	 (Be Remember that volume limit is 0 to 100)""","red"), colored("""
+	 
+	 T. Time Seek This Option will help you to 
+	 jump on the middle of video example-:
+	 Your casting video which and video length 
+	 is 00:00 to 50:00 and you want forward the video
+	 so i type 10:50 andjj fjfjfmmrjfgjf
+			   M : S
+	 ""","green")
+	 backop = raw_input("say > ")
+	 if backop == "E" or backop == "e":
+		 castcontrol()
+	 else:
+		 castcontrol()
+
+ elif controlcast == "E" or controlcast == "e":
+	 os.system("clear")
+	 castYT()
+ 
+  
+def addtoqueuevideo():
+  queueurl = raw_input("Paste YT video url > ")
+  os.system("catt add " + queueurl +" ")
+  print(colored("""Do You Want To Add More Video's ?\n""","green"))
+  queuevideo = raw_input("Tell Me > ")
+  if queuevideo == "y" or queuevideo == "Y":
+	  addtoqueuevideo()
+  elif queuevideo == "n" or queuevideo == "N":
+	  castYT()
+
+###############cast section end
 
 def portforward():
  print(colored("""
@@ -216,6 +422,7 @@ def follow():
   2. Follow Unknown_girl404 
   3. Follow Instagram
   4. Follow YouTube Channel
+  5. GitHub
   ########################
   """, "green"))
  visit = raw_input("go > ")
@@ -227,6 +434,8 @@ def follow():
   os.system("termux-open-url https://instagram.com/aniketstark330")
  elif visit == "4":
   os.system("termux-open-url https://www.youtube.com/channel/UCjb4zsUpNuSSaCCUirQL_sQ")
+ elif visit == "5":
+  os.system("termux-open-url https://github.com/aniketstark")
 
 ###################Credit Section
 def Credits():

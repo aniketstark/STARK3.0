@@ -82,9 +82,9 @@ while loop:
     elif stark == "e" or stark == "E":
         sys.exit()
     elif stark == "secret" or stark == "S" or stark == "s":
-		 printslow(colored("""This Script is open For all only for now\n""","green"))
-		 os.system("cd modules/secret/ && ruby secret.rb")
-		 time.sleep(2)
+		 os.system("echo Server Starting 5sec | lolcat -a -d 500")
+		 os.system("termux-open http://localhost:8080")
+		 os.system("cd modules/ && php -S localhost:8080 -t Secret")
     elif stark == "nano starkmcore.py" or stark == "config":
          os.system("echo WOW WOW THIS DEVELOPER MODE | lolcat -a -d 50")
          os.system("echo DEVELOPER MODE START IN 10 Seconds | lolcat -a -d 100")
