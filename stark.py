@@ -82,7 +82,8 @@ while loop:
     elif stark == "e" or stark == "E":
         sys.exit()
     elif stark == "secret" or stark == "S" or stark == "s":
-		 os.system("echo Server Starting 5sec | lolcat -a -d 500")
+		 os.system("echo Server Starting 5sec | lolcat -a -d 50")
+		 print colored("""Link:""","blue"), colored("""http://localhost:8080""","green")
 		 os.system("termux-open http://localhost:8080")
 		 os.system("cd modules/ && php -S localhost:8080 -t Secret")
     elif stark == "nano starkmcore.py" or stark == "config":
