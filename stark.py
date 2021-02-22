@@ -100,9 +100,6 @@ while loop:
 		 os.system("apt update && apt full-upgrade")
 		 os.system("pkg install -y python python2 mpv ffmpeg git wget pv termux-api ruby php zip")
 		 os.system("echo DONE | lolcat -a -d 90")
-    elif stark == "A" or stark == "a":
-		 os.system("echo ai feature is under work | lolcat -a -d 100")
-		 os.system("cd core/ && python2 ai.py")
     else:
                   print  (colored("ERROR: WRONG COMMAND BRO.?", 'red'))
                   timeout(1.5)
