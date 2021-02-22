@@ -30,6 +30,5 @@ commands" | pv -qL 10
 printf "$green"
 echo "Please install Termux API from
 playstore" | pv -qL 10
-termux-open-url https://play.google.com/store/apps/details?id=com.termux.api
 
 fi
