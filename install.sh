@@ -4,7 +4,7 @@ green='\033[1;32m'
 
 printf "$green"
 echo "INSTALLING IMPORTANT PACKAGES"
-apt-get -y --allow-unauthenticated install pv ruby  git curl php python python2 wget termux-api zip libcurl
+apt-get -y --allow-unauthenticated install pv ruby  git curl php python python2 wget termux-api zip libcurl mpv
 gem install colorize
 pip install lolcat
 pip2 install beautifulsoup4
@@ -12,7 +12,6 @@ pip2 install termcolor
 pip2 install argparse
 pip2 install request
 pip2 install pysocks
-pkg install mpv
 printf "$green"
 echo "You Need to install Termux API APP For some
 commands" | pv -qL 10
