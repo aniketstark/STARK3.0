@@ -3,7 +3,7 @@ white='\033[1;37m'
 green='\033[1;32m'
 
 printf "$green"
-echo "INSTALLING IMPORTANT PACKAGE"
+echo "INSTALLING IMPORTANT PACKAGES"
 apt-get -y --allow-unauthenticated install pv ruby  git curl php python python2 wget termux-api zip libcurl
 gem install colorize
 pip install lolcat
