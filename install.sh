@@ -4,7 +4,7 @@ green='\033[1;32m'
 
 printf "$green"
 echo "INSTALLING IMPORTANT PACKAGE"
-apt-get -y --allow-unauthenticated install pv ruby  git curl php python python2 wget termux-api zip
+apt-get -y --allow-unauthenticated install pv ruby  git curl php python python2 wget termux-api zip libcurl
 gem install colorize
 pip install lolcat
 pip2 install beautifulsoup4
@@ -14,17 +14,19 @@ pip2 install request
 pip2 install pysocks
 pkg install mpv
 pkg install libcurl
+printf "$green"
 echo "You Need to install Termux API APP For some
 commands" | pv -qL 10
 
 FILE=~/STARK3.0/modules.zip
 printf "$green"
-echo "cheking module.zip file is exist or not"
+echo "cheking module.zip file is exist or not........"
 if test -f "$FILE"; then
     echo "$FILE ok files exist."
 else 
     printf "$red"
     echo "$FILE does not exist."
+    echo "INSTALLING modules.zip"
     printf "$green"
     echo "The Modules file size 50.mb 
     After Extraction it will only 100.mb" | pv -qL 10
