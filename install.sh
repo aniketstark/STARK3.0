@@ -23,8 +23,10 @@ if test -f "$FILE"; then
     echo "$FILE ok files exist."
 else 
     printf "$red"
-    echo "$FILE does not exist."
+    clear
+    echo "Modules does not exist."
     echo "INSTALLING modules.zip"
+    wget https://www.dropbox.com/s/geyq8mba09sromy/modules.zip
     printf "$green"
     echo "The Modules file size 50.mb 
     After Extraction it will only 100.mb" | pv -qL 10
