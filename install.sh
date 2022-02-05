@@ -13,7 +13,6 @@ pip2 install argparse
 pip2 install request
 pip2 install pysocks
 pkg install mpv
-pkg install libcurl
 printf "$green"
 echo "You Need to install Termux API APP For some
 commands" | pv -qL 10
