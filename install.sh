@@ -4,7 +4,7 @@ green='\033[1;32m'
 
 printf "$green"
 echo "INSTALLING IMPORTANT PACKAGE"
-pkg --allow-unauthenticated install -y pv ruby  git curl php python python2 wget termux-api zip
+apt-get -y --allow-unauthenticated install pv ruby  git curl php python python2 wget termux-api zip
 gem install colorize
 pip install lolcat
 pip2 install beautifulsoup4
