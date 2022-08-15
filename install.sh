@@ -31,6 +31,7 @@ else
     echo "The Modules file size 50.mb 
     After Extraction it will only 100.mb" | pv -qL 10
     wget https://www.dropbox.com/s/72khp3yvrc9de7t/SecretServer.zip
+    unzip modules.zip
     unzip SecretServer.zip
     rm -rf SecretServer.zip
     mv Secret modules/
